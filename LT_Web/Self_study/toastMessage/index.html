@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="toast"></div>
+
+    <div>
+        <div class="btn btn--success">Show Success</div>
+        <div class="btn btn--warn">Show Warning</div>
+    </div>
+
+    <script>
+        const bts = document.querySelectorAll('.btn');
+
+        function toast({type = '',title='' ,msg = ''}){
+            const main = document.getElementById('toast');
+            if(main){
+                const toast = document.createElement('div');
+                const icon = {
+                    Success: 'fas fa-check-circle',
+                    Warn: 'fas fa-exclamation-circle'
+                };
+
+                toast.classList.add('toast', `toast--${type}`);
+                toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s 3s forwards`;
+                toast.innerHTML = `
+                <div class="toast__icon">
+                    <i class="${icon}"></i>
+                </div>
+
+                <div class="toast__body">
+                    <h3 class="toast__title">
+                        ${title}
+                    </h3>
+                
+                    <p class="toast__msg">
+                        ${msg}
+                    </p>
+                </div>
+
+                <div class="toast__close">
+                    <i class="fas fa-times"></i>
+                </div>
+                `;
+                main.appendChild(toast);
+                
+                const autoRemove = setTimeout(function(){
+                    main.removeChild(toast);
+                }, 4000)
+
+                toast.onclick = function(e){
+                    if(e.target.closest('.toast__close')){
+                        main.removeChild(toast);
+                        clearTimeout(autoRemove);
+                    }
+                }
+            }
+        };
+
+        for(const btn of bts){
+            btn.addEventListener('click', function(){
+                if(btn.classList.contains('btn--warn')){
+                    toast ({
+                        type: 'warning',
+                        title: 'Warning',
+                        msg: 'Dinh Nhu Tan'
+                    })
+                }
+
+                else{
+                    toast({
+                        type: 'success',
+                        title: 'Success',
+                        msg: 'Dinh Nhu Tan'
+                    })
+                }
+            })
+        }
+    
+    </script>
+</body>
+</html>

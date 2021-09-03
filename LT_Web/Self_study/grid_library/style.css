@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+
+.col{
+    text-align: center;
+    background-color: #ccc;
+    background-clip: content-box;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.item{
+    margin-top: 16px;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    min-height: 140px;
+    line-height: 140px;
+    background-color: orange;
+}
+
+.main{
+    display: flex;
+    margin: 0 16px;
+}
+
+.sidebar{
+    width: 300px;
+    background-color: aqua;
+}
+
+.content{
+    flex-grow: 1;
+    background-color: #898989;
+}
+
+@media (max-width: 1024px){
+    .a{
+        display: none;
+    }
+}
