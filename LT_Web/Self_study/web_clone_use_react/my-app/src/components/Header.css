@@ -1,0 +1,25 @@
+.header{
+    max-width: 1140px;
+    margin: 0 auto;
+    height: 75px;
+}
+
+.header-group {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content:space-between;
+}
+
+.logo-link{
+    font-size: 24px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo-link~span{
+    color: #009ECE !important;
+    font-size:2.4rem;
+    font-weight: 700;
+}

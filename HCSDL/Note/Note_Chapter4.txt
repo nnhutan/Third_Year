@@ -1,0 +1,62 @@
+- mô hình dữ liệu quan hệ là một cơ sở dữ liệu được biểu diễn 
+dưới dạng quan hệ bảng hai chiều
+- lược đồ quan hệ: R = {A...}
+- bậc của mối liên kết là số lượng thực thể tham gia vào
+ mối liên kết đó
+- Tuple: row/record
+- Cardinality: số lượng các tuple trong bản
+- database schema: S = {lược đồ quan hệ} = {R...}
+- a relation r:
+
+-------------------------------------------------
+
+một bảng là một mối quan hệ. do đó thay vì gọi table name thì
+ta gọi relation name, row -> tuple, field -> attribute
+
+ràng buộc: từ khóa, toàn vẹn thực thể, toàn vẹn tham chiếu
+
+Null value: có thể dư liệu không có, không biết, không khả thi, không xác định
+
+---------------------------------------------------
+
+Ràng buộc về khóa:
+	siêu khóa (superkey) là tập hợp các thuộc tính của bảng
+	dùng để phân biệt các dòng dữ liệu với nhau
+
+	khóa chính cũng là siêu khóa
+
+	Khóa là siêu khóa nhỏ nhất
+
+	khóa dự tuyển (candidate) những trường hợp có những tập
+	khóa để lựa chọn hay nói cách khác là các ứng viên để
+	được lựa chọn vào vị trí khóa chính
+
+	=> Một bảng phải có khóa chính để tránh tình trạng
+	một bảng sẽ bị trùng các dòng hay các tuple
+
+Ràng buộc toàn vẹn thực thể:
+
+	Khóa chính không được quyền Null và không được lặp
+	
+Ràng buộc toàn vẹn tham chiếu:
+
+	Liên kết giữa các bảng phải có một liên kết, một
+	ràng buộc tham chiếu để các dữ liệu thống nhất và
+	chính xác, nhất quán trong toàn bộ csdl
+
+	Nếu giá trị giữa hai bảng thì giá trị của bảng tham 
+	chiếu phải được chứa trong bảng được tham chiếu
+
+---------------------------------------------------------
+Khóa ngoại có thể Null và không cần phải unique, khóa ngoại
+tham gia vào mối tham chiếu giữa các bảng với nhau.
+nhưng có một trường hợp đặc biệt là nếu khóa ngoại là thành phần
+của khóa chính thì khóa ngoại không được null và không được unique
+--------------------------------------------------------
+Những ràng buộc khác:
+	ràng buộc toàn vẹn về ngữ nghĩa
+	ràng buộc chuyển tiếp, động: ví dụ tiền lương là chỉ tăng
+	ràng buộc trạng thái
+-----------------------------------------------
+Những tác vụ trong mối quan hệ: chèn, xóa, thay đổi
+

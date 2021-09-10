@@ -1,0 +1,30 @@
+navbar-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-item{
+    text-decoration: none;
+    padding: 0px 15px;
+    font-size:1.4rem;
+    color: #000;
+}
+
+.navbar-item:hover,
+.navbar-item.item-active{
+    color: #009ECE;
+}
+
+.login-btn{
+    display: inline-block;
+    padding: 8px 22px;
+    color: #ffffff !important;
+    background: #009ECE;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.MuiSvgIcon-root{
+    transform: translateY(20%)
+}

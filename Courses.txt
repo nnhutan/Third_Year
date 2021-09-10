@@ -1,0 +1,60 @@
+==============================================================================
+*** Fundamental:
+The Complete Junior to Senior Web Developer Roadmap (2020):
+https://www.youtube.com/playlist?list=PLY_M6RcPTkJb2tLjszrAxxM9AKh8LoEQk
+
+The Complete Web Developer in 2021 Zero to Mastery:
+https://www.youtube.com/playlist?list=PLY_M6RcPTkJaHuwHgFpFylhdTrqpewML_
+==============================================================================
+
+
+==============================================================================
+*** Frameworks:
+Complete React Developer in 2020 (w Redux, Hooks, GraphQL):
+https://www.youtube.com/playlist?list=PLY_M6RcPTkJbMOI18kW1zXsFCOzjwQ_Ru
+==============================================================================
+
+
+==============================================================================
+*** Styling:
+CSS - The Complete Guide 2020 (incl. Flexbox, Grid _ Sass):
+https://www.youtube.com/playlist?list=PLY_M6RcPTkJZX8wdnGLOZHAenWZs7eCfS
+==============================================================================
+
+
+==============================================================================
+*** Interviews:
+Master the Coding Interview Big Tech (FAANG) Interviews:
+https://www.youtube.com/playlist?list=PLY_M6RcPTkJYpptj24Oe5ERmlzDoHRipS
+
+Master the Coding Interview Data Structures + Algorithms:
+https://www.youtube.com/playlist?list=PLY_M6RcPTkJaYlMdlQ3F2Sgv7ciPVcRMH
+==============================================================================
+
+
+==============================================================================
+*** Language:
+Advanced JavaScript Concepts:
+https://www.youtube.com/playlist?list=PLY_M6RcPTkJZvRaTxBvXIfeXqEs23-PFw
+==============================================================================
+
+
+==============================================================================
+*** Hacking:
+Complete Ethical Hacking Bootcamp 2021 - Zero to Mastery:
+https://www.youtube.com/playlist?list=PLY_M6RcPTkJbHgZkzkRY-ArPoblNegQK7
+==============================================================================
+
+
+==============================================================================
+*** Microservices:
+Microservices with Node JS and React:
+https://www.youtube.com/playlist?list=PLY_M6RcPTkJbM5GI0rw88e0cH3OTDHfUi
+==============================================================================
+
+
+==============================================================================
+*** Softskills:
+Udemy - Learning to Learn [Efficient Learning] Zero to Mastery:
+https://www.youtube.com/playlist?list=PLY_M6RcPTkJbBac2XfLgZRgb1PvQ1qK7k
+==============================================================================
