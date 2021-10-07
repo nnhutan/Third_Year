@@ -1,8 +1,19 @@
 {
-	"folders": [
-		{
-			"path": "web_clone_use_react"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "php"
+    },
+    {
+      "path": "..\\..\\..\\..\\..\\..\\xampp\\htdocs\\myself"
+    },
+    {
+      "path": "web_react_php"
+    },
+    {
+      "path": "expressjs"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "React-Tutorials-master"
+  }
 }

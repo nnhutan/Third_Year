@@ -1,0 +1,13 @@
+.top-header a {
+  color: #777;
+}
+
+.top-header a,
+.top-header li {
+  transition: all 0.3s ease-in-out;
+}
+
+.top-header li:hover,
+.top-header a:hover {
+  color: #39f;
+}

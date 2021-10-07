@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-3">
+        <button class="btn btn-primary js-btn-newtable">NEW TABLE</button>
+        <button class="btn btn-primary js-btn-addrow">ADD ROW</button>
+        <button class="btn btn-primary js-btn-addcol">ADD COL</button>
+        <button class="btn btn-danger js-btn-clear">DELETE TABLE</button>
+        <div class="d-flex justify-content-between mt-2">
+            <div class="input-group mb-3" style="width: 48%">
+                <input type="text" class="form-control" placeholder="Index of row">
+                <button class="btn btn-danger js-btn-delrow" type="butto">DELETE ROW</button>
+            </div>
+            <div class="input-group mb-3" style="width: 48%">
+                <input type="text" class="form-control" placeholder="Index of column">
+                <button class="btn btn-danger js-btn-delcol" type="button">DELETE COL</button>
+            </div>
+        </div>
+
+        <div id="main" class="mt-4">
+
+        </div>
+    </div>
+    <script>
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+        const createTable = $('.js-btn-newtable');
+        const addRow = $('.js-btn-addrow');
+        const addColumn = $('.js-btn-addcol');
+        const clear = $('.js-btn-clear');
+        const delRow = $('.js-btn-delrow');
+        const delCol = $('.js-btn-delcol');
+        const main = $('#main');
+
+        createTable.addEventListener('click', () => {
+            const table = $('table');
+            if (!table) {
+                const table = document.createElement('table');
+                table.classList.add('table', 'table-bordered', 'border-primary');
+                table.innerHTML = `
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+            `
+                main.appendChild(table);
+            }
+            else alert('Bạn đã tạo bảng rồi!')
+        })
+
+        addRow.addEventListener('click', () => {
+            const table = $('table');
+            if (table) {
+                const row = table.querySelector('tbody tr:first-child');
+                table.querySelector('tbody').appendChild(row.cloneNode(true));
+            }
+            else alert("Không có bảng nào hết!");
+        })
+
+        addColumn.addEventListener('click', () => {
+            const table = $('table');
+            if (table) {
+                const rows = main.querySelectorAll('tr');
+                rows.forEach(row => row.appendChild(document.createElement('td')))
+            }
+            else alert("Không có bảng nào hết!");
+        })
+
+        clear.addEventListener('click', () => {
+            const table = $('table');
+            if (!table) alert("Không có bảng nào hết!")
+            else
+                main.removeChild(table);
+        })
+
+        delCol.addEventListener('click', () => {
+            const index = Number(delCol.parentNode.querySelector('input').value);
+            delCol.parentNode.querySelector('input').value = '';
+            const table = $('table');
+            if (index === '' || index < 0) alert("Index không hợp lệ!");
+            else if (table) {
+                const rows = table.querySelectorAll('tbody tr');
+                if (rows[0].querySelectorAll('td').length <= index) alert("Index không hợp lệ! (Note: bắt đầu từ 0)");
+                else {
+                    Array.prototype.slice.call(rows).some(row => {
+                        const cols = row.querySelectorAll('td');
+                        if (cols.length == 1) {
+                            const table = $('table');
+                            main.removeChild(table);
+                            return true;
+                        }
+                        else row.removeChild(row.querySelector(`td:nth-child(${index + 1})`));
+                        return false;
+                    });
+                }
+            }
+            else alert("Không có bảng nào hết!");
+        })
+
+        delRow.addEventListener('click', () => {
+            const index = Number(delRow.parentNode.querySelector('input').value);
+            delRow.parentNode.querySelector('input').value = '';
+            const table = $('table');
+            if (index === '' || index < 0) alert("Index không hợp lệ!");
+            else if (table) {
+                const rows = table.querySelectorAll('tbody tr');
+                if (rows.length <= index) alert("Index không hợp lệ! (Note: bắt đầu từ 0)");
+                else if (rows.length == 1) clear.click();
+                else {
+                    const tbody = table.querySelector('tbody');
+                    tbody.removeChild(tbody.querySelector(`tr:nth-child(${index + 1})`));
+                }
+            }
+            else alert("Không có bảng nào hết!");
+        })
+    </script>
+</body>
+
+</html>

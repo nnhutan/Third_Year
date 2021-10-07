@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick-theme.css" />
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="module" src="./assets/js/index.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./assets/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                centerMode: true,
+                slidesToShow: 1,
+                variableWidth: true,
+                autoplay: false,
+                responsive: true,
+            });
+
+        });
+
+        $(document).ready(function () {
+            $('.properties-slider__container').slick({
+                centerMode: true,
+                slidesToShow: 1,
+                variableWidth: true,
+                autoplay: false,
+                navVisibles: false,
+                dots: true,
+                responsive: true,
+                infinite: true,
+            });
+
+            $('.properties-slider .slick-prev').hide()
+            $('.properties-slider .slick-next').hide()
+            const propertiesSlider = document.querySelector('.properties-slider');
+            const btnNext = propertiesSlider.querySelector('.js-btn-next');
+            const btnPrev = propertiesSlider.querySelector('.js-btn-prev');
+            btnNext.addEventListener('click', () => $('.properties-slider .slick-next').click());
+            btnPrev.addEventListener('click', () => $('.properties-slider .slick-prev').click());
+            const btnExpandSub = document.querySelector('.js-btn-expand-sub');
+            const btnExpandSubSub = document.querySelector('.js-btn-expand-sub-sub');
+            const menuBtn = document.querySelector('.js-menu-btn');
+            const sideBarMenu = document.querySelector('.sidebar-menu')
+            const all = document.getElementById('wrapper-all-document')
+
+            menuBtn.addEventListener('click', () => {
+                sideBarMenu.classList.remove('hide')
+                sideBarMenu.style.animation = 'showMenu linear .3s'
+                all.style.filter = 'brightness(70%)';
+            })
+
+            const closeMenuBtn = sideBarMenu.querySelector('.sidebar-menu__close');
+
+            closeMenuBtn.addEventListener('click', () => {
+                setTimeout(() => { sideBarMenu.classList.add('hide'); }, 300)
+                sideBarMenu.style.animation = 'hideMenu linear .3s forwards'
+                all.style.filter = null;
+            })
+
+
+            btnExpandSub.addEventListener('click', () => {
+                if (!btnExpandSub.nextElementSibling.classList.contains('hide')) {
+                    btnExpandSub.style.animation = 'rotation2 .3s linear forwards';
+                    btnExpandSub.nextElementSibling.style.animation = 'growUp .2s ease-in-out forwards';
+                    setTimeout(() => {
+                        btnExpandSub.nextElementSibling.classList.add('hide')
+                    }, 200);
+                }
+                else {
+                    btnExpandSub.style.animation = 'rotation1 .3s linear forwards';
+                    btnExpandSub.nextElementSibling.style.animation = 'growDown .2s ease-in-out forwards';
+                    btnExpandSub.nextElementSibling.classList.remove('hide')
+                }
+            });
+            btnExpandSubSub.addEventListener('click', () => {
+                if (!btnExpandSubSub.nextElementSibling.classList.contains('hide')) {
+                    btnExpandSubSub.style.animation = 'rotation2 .2s linear forwards';
+                    btnExpandSubSub.nextElementSibling.style.animation = 'growUp .3s ease-in-out forwards';
+                    setTimeout(() => {
+                        btnExpandSubSub.nextElementSibling.classList.add('hide')
+                    }, 200);
+                }
+                else {
+                    btnExpandSubSub.style.animation = 'rotation1 .2s linear forwards';
+                    btnExpandSubSub.nextElementSibling.style.animation = 'growDown .3s ease-in-out forwards';
+                    btnExpandSubSub.nextElementSibling.classList.remove('hide')
+                }
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+.slider img {
+  height: 400px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: #ccc;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease-in-out;
+}
+.carousel-control-next-icon:hover,
+.carousel-control-prev-icon:hover {
+  background-color: #39f;
+}
+
+.intro-caption {
+  right: 20%;
+  left: unset;
+}
+
+.intro-subtitle {
+  margin-bottom: 6px;
+  color: #ef837b;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.intro-title {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333;
+}
+
+.intro-price {
+  margin: 10px 0 18px;
+}
+
+.intro-old-price {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #777;
+  text-decoration: line-through;
+  top: -1.2em;
+  margin-right: 4px;
+}
+
+.intro-new-price {
+  color: #ef837b;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.btn-shopmore {
+  min-width: 170px;
+  font-size: 1.4rem;
+  padding: 12px 0;
+  border-radius: 30px;
+  background-color: #39f;
+  outline: none;
+  border: none;
+}

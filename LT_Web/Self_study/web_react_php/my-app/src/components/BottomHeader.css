@@ -1,0 +1,129 @@
+.bottom-header {
+  font-size: 1.4rem;
+  line-height: 3.4rem;
+  font-weight: 500;
+}
+
+.bottom-header .category {
+  display: flex;
+  min-width: 274px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+.bottom-header .close-icon,
+.bottom-header .list-icon {
+  font-size: 2.4rem;
+  margin-right: 12px;
+}
+
+.bottom-header .close-icon {
+  display: none;
+  color: #fff;
+}
+
+p {
+  margin: 0;
+}
+.navbar {
+  padding: 0;
+}
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-item {
+  padding: 16px 15px;
+  position: relative;
+  line-height: 2rem;
+  margin-right: 8px;
+}
+
+.bottom-header a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.bottom-header li:hover,
+.bottom-header a:hover {
+  color: #39f;
+}
+
+.bottom-header .category:hover {
+  color: #fff;
+  background-color: #39f;
+  cursor: pointer;
+}
+.bottom-header .category:hover .list-icon {
+  display: none;
+}
+
+.bottom-header .category:hover .close-icon {
+  display: block;
+}
+
+.bottom-header .navbar-item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #39f;
+  transform-origin: right center;
+  transform: scale(0, 1);
+  transition: transform 0.3s ease;
+}
+
+.bottom-header .navbar-item:hover:before {
+  transform-origin: left center;
+  transform: scale(1, 1);
+  top: 0;
+}
+
+.bottom-header .navbar-item.active:before {
+  transform: scale(1, 1) !important;
+}
+
+.category-list {
+  position: absolute;
+  width: calc(100% - 4px);
+  top: 100%;
+  left: 2px;
+  list-style: none;
+  color: #000;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.category-item {
+  border-bottom: 1px solid #ccc;
+  padding: 4px 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.category-item:hover {
+  background-color: #f8f8f8;
+}
+
+.category:hover .category-list {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1, 1);
+}

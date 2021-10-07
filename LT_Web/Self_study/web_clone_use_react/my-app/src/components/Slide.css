@@ -1,0 +1,9 @@
+.slide-container{
+    height: 850px;
+    width: 100%;
+    background-image: url(../images/subtle_zebra_3d.png);
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

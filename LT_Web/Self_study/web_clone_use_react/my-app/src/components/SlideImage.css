@@ -1,0 +1,8 @@
+.image{
+    width:50%;
+    height:60%;
+    position:absolute;
+    background-image: url(../images/property_1-min.png);
+    background-size: cover;
+    margin: auto;
+}
