@@ -1,15 +1,6 @@
 {
   "folders": [
     {
-      "path": "php"
-    },
-    {
-      "path": "..\\..\\..\\..\\..\\..\\xampp\\htdocs\\myself"
-    },
-    {
-      "path": "web_react_php"
-    },
-    {
       "path": "expressjs"
     }
   ],

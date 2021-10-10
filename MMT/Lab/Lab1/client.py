@@ -2,6 +2,7 @@
 from socket import AF_INET, socket, SOCK_STREAM
 from threading import Thread
 
+
 def receive():
     """Handles receiving of messages."""
     while True:
@@ -27,7 +28,8 @@ def on_closing(event=None):
     """This function is to be called when the window is closed."""
     send()
 
-#----Now comes the sockets part----
+
+# ----Now comes the sockets part----
 PORT = int(input('port: '))
 HOST = input('host: ')
 

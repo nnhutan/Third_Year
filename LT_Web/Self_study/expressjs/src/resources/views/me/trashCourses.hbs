@@ -1,0 +1,83 @@
+<div class="mt-4">
+  <h3>Thùng rác</h3>
+  <a href="/me/stored/courses">Quay lại</a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#th>
+        <th scope="col">Tên khóa học</th>
+        <th scope="col">Thời gian tạo</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        {{#each courses}}
+      <tr>
+        <th scope="row">{{ sum @index 1}}</th>
+        <td>{{this.name}}</td>
+        <td>{{this.createdAt}}</td>
+        <td><a href="" class="btn btn-danger js-del-forever" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="{{this._id}}">Xóa vĩnh viễn</a></td>
+        <td><a href="" class="btn btn-warning js-restore" data-id="{{this._id}}">Khôi phục</a></td>
+      </tr>
+  
+      {{else}}
+      <tr>
+        <td colspan="5" class="text-center">
+          Thùng rác trống
+          <a href="/me/stored/courses">Quay trở lại danh sách khóa học</a>
+        </td>
+      </tr>
+  
+      {{/each}}
+    </tbody>
+  </table>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bạn chắc chắn muốn xóa chứ!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id= "js-del">Sure</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <form name="delete-course" method="POST"></form>
+  <form name="restore-course" method="POST"></form>
+  
+  <script>
+    var delForm = document.forms['delete-course']
+    var restoreForm = document.forms['restore-course']
+    var exampleModal = document.getElementById('exampleModal')
+  exampleModal.addEventListener('show.bs.modal', function (event) {
+    // Button that triggered the modal
+    var button = event.relatedTarget
+    // Extract info from data-bs-* attributes
+    var recipient = button.getAttribute('data-id')
+    const btnDel = document.getElementById('js-del')
+    btnDel.onclick = ()=>{
+      delForm.action = `/courses/${recipient}/force?_method=DELETE`
+      delForm.submit();
+    }
+  })
+   const restoreBtns = document.querySelectorAll('.js-restore')
+   restoreBtns.forEach(btn => {
+     btn.addEventListener('click',function (e){
+       e.preventDefault();
+       const id  = this.dataset['id'];
+      restoreForm.action = `/courses/${id}/restore?_method=PATCH`
+      restoreForm.submit()
+     })
+   })
+  </script>
+</p>

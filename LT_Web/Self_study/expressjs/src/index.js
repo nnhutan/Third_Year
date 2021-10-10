@@ -4,8 +4,14 @@ const express = require("express");
 const handlebars = require("express-handlebars");
 const route = require("./routes");
 
+const methodOverride = require("method-override");
 const app = express();
 const port = 3000;
+
+app.use(methodOverride("_method"));
+
+//use middleware
+app.use(express.urlencoded());
 
 // connect to db
 const db = require("./config/db");
@@ -22,6 +28,9 @@ app.engine(
   "hbs",
   handlebars({
     extname: ".hbs",
+    helpers: {
+      sum: (a, b) => a + b,
+    },
   })
 );
 app.set("view engine", "hbs");

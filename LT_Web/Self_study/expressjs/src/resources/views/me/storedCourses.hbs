@@ -1,0 +1,121 @@
+<form class="mt-4" method="POST" action="/courses/handle-form-actions">
+  <h3>Danh sách khóa học</h3>
+  <a href="/me/trash/courses">Thùng rác</a>
+
+  <div class="mt-4 d-flex">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">Chọn tất cả</label>
+    </div>
+
+    <select class="form-select form-select-sm w-50 mx-4 js-action-select" aria-label="Default select example"
+      name="action">
+      <option value="-1" selected> Chọn hành động</option>
+      <option value="delete">Xóa</option>
+    </select>
+    <button class="btn btn-primary btn-sm disabled js-btn-submit" type="submit">Thực hiện</button>
+  </div>
+
+  <table class="table ">
+    <thead>
+      <tr>
+        <th></th>
+        <th scope="col">#</th>
+        <th scope="col">Tên khóa học</th>
+        <th scope="col">Thời gian tạo</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each courses}}
+        <tr>
+          <td>
+            <input class="form-check-input" type="checkbox" name="courseIds[]" value="{{this._id}}">
+          </td>
+          <td scope="row">{{ sum @index 1}}</td>
+          <td>{{this.name}}</td>
+          <td>{{this.createdAt}}</td>
+          <td><a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              data-id="{{this._id}}">Xóa</a></td>
+          <td><a href="/courses/{{this._id}}/edit" class="btn btn-warning">Sửa</a></td>
+        </tr>
+
+      {{else}}
+        <tr>
+          <td colspan="5" class="text-center">
+            Bạn chưa đăng khóa học nào!
+            <a href="/courses/create">Đăng khóa học</a>
+          </td>
+        </tr>
+
+      {{/each}}
+    </tbody>
+  </table>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bạn chắc chắn muốn xóa chứ!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="js-del">Sure</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form name="delete-course" method="POST"></form>
+
+  </fo>
+  <script>
+    var delForm = document.forms['delete-course']
+    var exampleModal = document.getElementById('exampleModal')
+    exampleModal.addEventListener('show.bs.modal', function (event) {
+      // Button that triggered the modal
+      var button = event.relatedTarget
+      // Extract info from data-bs-* attributes
+      var recipient = button.getAttribute('data-id')
+      const btnDel = document.getElementById('js-del')
+      btnDel.onclick = () => {
+        delForm.action = `/courses/${recipient}?_method=DELETE`
+        delForm.submit();
+      }
+    })
+
+    const checkboxAll = document.getElementById('flexCheckDefault')
+    const courseItemCheckbox = document.querySelectorAll('input[name= "courseIds[]"')
+    checkboxAll.addEventListener('change', function () {
+      courseItemCheckbox.forEach(item => item.checked = this.checked)
+      if (this.checked) { switchBtnAction() }
+      else switchBtnAction(false)
+    })
+
+    courseItemCheckbox.forEach(item => item.addEventListener('change', function () {
+      if (checkboxAll.checked) checkboxAll.checked = false;
+      const countCheck = document.querySelectorAll('input[name= "courseIds"]:checked').length
+      if (this.checked) {
+        checkboxAll.checked = (countCheck == document.querySelectorAll('input[name= "courseIds[]"]').length);
+      }
+      if (countCheck > 0) switchBtnAction()
+      else switchBtnAction(false)
+    }))
+
+    const actionSelect = document.querySelector('.js-action-select')
+    function switchBtnAction(flag = true) {
+      const btn = document.querySelector('.js-btn-submit')
+      const action = actionSelect.value
+      if (flag && action != -1) btn.classList.remove('disabled')
+      else btn.classList.add('disabled')
+    }
+
+    actionSelect.addEventListener('change', switchBtnAction)
+
+  </script>
