@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelix - Clone by PD</title>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.css">
+    <!-- <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header" id="header">
+        <nav class="nav__contact">
+            <div class="nav__contact-menu bd-grid">
+                <div>
+                    <p class="nav__contact-phone">+84 334 820 317</p>
+                    <ul class="nav__contact-list">
+                        <li><a href="#" class="nav__contact-link"><i class='bx bxl-pinterest nav__contact-icon'></i></a>
+                        </li>
+                        <li><a href="#" class="nav__contact-link"><i class='bx bxl-facebook nav__contact-icon'></i></a>
+                        </li>
+                        <li><a href="#" class="nav__contact-link"><i class='bx bxl-twitter nav__contact-icon'></i></a>
+                        </li>
+                        <li><a href="#" class="nav__contact-link"><i class='bx bxl-dribbble nav__contact-icon'></i></a>
+                        </li>
+                        <li><a href="#" class="nav__contact-link"><i class='bx bxl-behance nav__contact-icon'></i></a>
+                        </li>
+                        <li><a href="#" class="nav__contact-link"><i class='bx bxl-linkedin nav__contact-icon'></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="#" class="nav__contact-link">Login</a>
+                    <a href="#" class="nav__contact-link">Register</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">
+                    <img src="./assets/images/logo.png" alt=""><span>TRAVELIX</span>
+                </a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About Us</a></li>
+                    <li class="nav__item"><a href="#new" class="nav__link">News</a></li>
+                    <li class="nav__item"><a href="#offer" class="nav__link">Offers</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <i class='bx bx-search nav__search' id="nav-search"></i>
+                <i class='bx bx-menu nav__toggle' id="nav-toggle"></i>
+            </div>
+            <input type="text" placeholder="Search..." id="nav-searchBox" class="nav__input">
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home" id="home">
+            <div class="home__bg">
+                <div class="home__data">
+                    <h1 class="home__title">DISCOVER</h1>
+                    <p class="section-subtitle">The World</p>
+                    <a href="#" class="button">Explore More ....</a>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SEARCH =====-->
+        <section class="search section" id="search">
+            <div class="search__container bd-grid">
+                <div class="search__menu">
+                    <ul class="search__list">
+                        <li class="search__item active-search"><a href="#" class="search__link"><img
+                                    src="./assets/images/suitcase.png" alt="">HOTELS</a></li>
+                        <li class="search__item"><a href="#" class="search__link"><img src="./assets/images/bus.png"
+                                    alt="">CAR RENTALS</a></li>
+                        <li class="search__item"><a href="#" class="search__link"><img
+                                    src="./assets/images/departure.png" alt="">FLIGHTS</a></li>
+                        <li class="search__item"><a href="#" class="search__link"><img src="./assets/images/island.png"
+                                    alt="">TRIPS</a></li>
+                        <li class="search__item"><a href="#" class="search__link"><img src="./assets/images/cruise.png"
+                                    alt="">CUISES</a></li>
+                        <li class="search__item"><a href="#" class="search__link"><img src="./assets/images/diving.png"
+                                    alt="">ACTIVES</a></li>
+                    </ul>
+                </div>
+                <div class="search__form">
+                    <ul class="search__form-list">
+                        <li class="search__form-item">
+                            <label for="destination" class="search__label">DESTINATION</label>
+                            <input type="text" class="search__input" id="destination">
+                        </li>
+
+                        <li class="search__form-item">
+                            <label for="checkin" class="search__label">CHECK IN</label>
+                            <input type="date" class="search__input" id="checkin">
+                        </li>
+
+                        <li class="search__form-item">
+                            <label for="checkout" class="search__label">CHECK OUT</label>
+                            <input type="date" class="search__input" id="checkout">
+                        </li>
+                        <li class="search__form-item">
+                            <label for="adults" class="search__label">ADULTS</label>
+                            <input type="number" min="0" max="2" class="search__input" id="adults">
+                        </li>
+                        <li class="search__form-item">
+                            <label for="children" class="search__label">CHILDREN</label>
+                            <input type="number" min="0" max="2" class="search__input" id="children">
+                        </li>
+                    </ul>
+                    <a href="#" class="search__btn">Search...</a>
+                </div>
+            </div>
+        </section>
+
+        <!--===== TOUR =====-->
+        <section class="tour section" id="tour">
+            <h2 class="section-title">WE HAVE THE BEST TOURS</h2>
+            <p class="tour__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis
+                tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</p>
+
+            <div class="tour__container bd-grid">
+                <div class="tour__box">
+                    <div class="tour__overlay"></div>
+                    <div class="tour__img tour__img-1"></div>
+                    <div class="tour__data">
+                        <p class="tour__date">May 15th - July 01st</p>
+                        <h2 class="tour__city">Mauritius</h2>
+                        <span class="tour__price">From $1450</span>
+                        <span class="tour__rating">
+                            <i class='bx bxs-star tour__star'></i>
+                            <i class='bx bxs-star tour__star'></i>
+                            <i class='bx bxs-star tour__star'></i>
+                            <i class='bx bxs-star tour__star'></i>
+                            <i class='bx bxs-star tour__star'></i>
+                        </span>
+                        <a href="" class="button tour__button">See more ...</a>
+                    </div>
+                </div>
+                <div class="tour__box">
+                    <div class="tour__overlay"></div>
+                    <div class="tour__img tour__img-2"></div>
+                    <div class="tour__data">
+                        <p class="tour__date">May 18th - July 01st</p>
+                        <h2 class="tour__city">Greece</h2>
+                        <span class="tour__price">From $1450</span>
+                        <span class="tour__rating">
+                            <i class='bx bxs-star tour__star'></i>
+                            <i class='bx bxs-star tour__star'></i>
+                            <i class='bx bxs-star tour__star'></i>
+                            <i class='bx bxs-star tour__star'></i>
+                            <i class='bx bxs-star tour__star'></i>
+                        </span>
+                        <a href="" class="button tour__button">See more ...</a>
+                    </div>
+                </div>
+                <div class="tour__box">
+                    <div class="tour__overlay"></div>
+                    <div class="tour__img tour__img-3"></div>
+                    <div class="tour__data">
+                        <p class="tour__date">May 28th - July 01st</p>
+                        <h2 class="tour__city">Scotland</h2>
+                        <span class="tour__price">From $1450</span>
+                        <span class="tour__rating">
+                            <i class='bx bxs-star tour__star'></i>
+                            <i class='bx bxs-star tour__star'></i>
+                            <i class='bx bxs-star tour__star'></i>
+                            <i class='bx bxs-star tour__star'></i>
+                            <i class='bx bxs-star tour__star'></i>
+                        </span>
+                        <a href="" class="button tour__button">See more ...</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--===== Call to action/BOOKS =====-->
+        <section class="cta section" id="cta">
+            <div class="cta__container bd-grid">
+                <div class="cta__bg"></div>
+                <div class="cta__box bd-grid">
+                    <h2 class="section-title">MALDIVES DELUXE<br>PACKAGE</h2>
+                    <span class="cta__rating">
+                        <i class='bx bxs-star cta__star'></i>
+                        <i class='bx bxs-star cta__star'></i>
+                        <i class='bx bxs-star cta__star'></i>
+                        <i class='bx bxs-star cta__star'></i>
+                        <i class='bx bxs-star cta__star'></i>
+                    </span>
+                    <p class="cta__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
+                        convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.
+                        Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur
+                        enim justo vel ligula.</p>
+                    <a href="#" class="button cta__btn">BOOK NOW</a>
+                </div>
+            </div>
+        </section>
+
+        <!--===== OFFFERS =====-->
+        <section class="offer section" id="offer">
+            <h2 class="offer__title">THE BEST OFFERS WITH ROOMS</h2>
+            <div class="offer__container bd-grid">
+                <div class="offer__tour">
+                    <div class="offer__box">
+                        <div class="offer__tag">GRAND CASTLE</div>
+                        <img src="./assets/images/offer_1.jpg" alt="" class="offer__img">
+                    </div>
+
+                    <div class="offer__data">
+                        <h2 class="offer__price">$70 <span>per night</span></h2>
+                        <span class="offer__rating">
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                        </span>
+                        <p class="offer__description">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+                        <span class="offer__icon">
+                            <img src="./assets/images/post.png" alt="" class="offer__icon-img">
+                            <img src="./assets/images/compass.png" alt="" class="offer__icon-img">
+                            <img src="./assets/images/bicycle.png" alt="" class="offer__icon-img">
+                            <img src="./assets/images/sailboat.png" alt="" class="offer__icon-img">
+                        </span>
+                        <a href="" class="offer__btn">Read more <i class='bx bx-chevron-right offer__icon-chev'></i></a>
+                    </div>
+                </div>
+                <div class="offer__tour">
+                    <div class="offer__box">
+                        <div class="offer__tag">TURKEY HILLS</div>
+                        <img src="./assets/images/offer_2.jpg" alt="" class="offer__img">
+                    </div>
+
+                    <div class="offer__data">
+                        <h2 class="offer__price">$50 <span>per night</span></h2>
+                        <span class="offer__rating">
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                        </span>
+                        <p class="offer__description">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+                        <span class="offer__icon">
+                            <img src="./assets/images/post.png" alt="" class="offer__icon-img">
+                            <img src="./assets/images/compass.png" alt="" class="offer__icon-img">
+                            <img src="./assets/images/bicycle.png" alt="" class="offer__icon-img">
+                            <img src="./assets/images/sailboat.png" alt="" class="offer__icon-img">
+                        </span>
+                        <a href="" class="offer__btn">Read more <i class='bx bx-chevron-right offer__icon-chev'></i></a>
+                    </div>
+                </div>
+                <div class="offer__tour">
+                    <div class="offer__box">
+                        <div class="offer__tag">ISLAND DREAM</div>
+                        <img src="./assets/images/offer_3.jpg" alt="" class="offer__img">
+                    </div>
+
+                    <div class="offer__data">
+                        <h2 class="offer__price">$90 <span>per night</span></h2>
+                        <span class="offer__rating">
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                        </span>
+                        <p class="offer__description">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+                        <span class="offer__icon">
+                            <img src="./assets/images/post.png" alt="" class="offer__icon-img">
+                            <img src="./assets/images/compass.png" alt="" class="offer__icon-img">
+                            <img src="./assets/images/bicycle.png" alt="" class="offer__icon-img">
+                            <img src="./assets/images/sailboat.png" alt="" class="offer__icon-img">
+                        </span>
+                        <a href="" class="offer__btn">Read more <i class='bx bx-chevron-right offer__icon-chev'></i></a>
+                    </div>
+                </div>
+                <div class="offer__tour">
+                    <div class="offer__box">
+                        <div class="offer__tag">TRAVEL LIGHT</div>
+                        <img src="./assets/images/offer_4.jpg" alt="" class="offer__img">
+                    </div>
+
+                    <div class="offer__data">
+                        <h2 class="offer__price">$30 <span>per night</span></h2>
+                        <span class="offer__rating">
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                            <i class='bx bxs-star offer__star'></i>
+                        </span>
+                        <p class="offer__description">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit. Nullam eu convallis tortor.</p>
+                        <span class="offer__icon">
+                            <img src="./assets/images/post.png" alt="" class="offer__icon-img">
+                            <img src="./assets/images/compass.png" alt="" class="offer__icon-img">
+                            <img src="./assets/images/bicycle.png" alt="" class="offer__icon-img">
+                            <img src="./assets/images/sailboat.png" alt="" class="offer__icon-img">
+                        </span>
+                        <a href="" class="offer__btn">Read more <i class='bx bx-chevron-right offer__icon-chev'></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section" id="about">
+            <h2 class="section-title">WHAT OURS CLIENTS SAY ABOUT US</h2>
+            <div class="about__container bd-grid owl-carousel owl-theme">
+                <div class="about__box item">
+                    <div class="about__tag">
+                        <img src="./assets/images/backpack.png" alt="" class="about__tag-img">
+                    </div>
+                    <img src="./assets/images/test_1.jpg" alt="" class="about__img">
+                    <div class="about__data">
+                        <div class="about__data-tag">
+                            <p class="about__name">CARLA SMITH</p>
+                            <span class="about__time">May 24, 2017</span>
+                        </div>
+                        <div class="about__data-quote">
+                            <p class="about__quote">" Best holliday ever "</p>
+                            <p class="about__quote-text">Nullam eu convallis tortor. Suspendisse potenti. In
+                                faucibus
+                                massa arcu, vitae cursus mi hendrerit nec.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__box item">
+                    <div class="about__tag">
+                        <img src="./assets/images/island_t.png" alt="" class="about__tag-img">
+                    </div>
+                    <img src="./assets/images/test_2.jpg" alt="" class="about__img">
+                    <div class="about__data">
+                        <div class="about__data-tag">
+                            <p class="about__name">CARLA SMITH</p>
+                            <span class="about__time">May 24, 2017</span>
+                        </div>
+                        <div class="about__data-quote">
+                            <p class="about__quote">" Best holliday ever "</p>
+                            <p class="about__quote-text">Nullam eu convallis tortor. Suspendisse potenti. In
+                                faucibus
+                                massa arcu, vitae cursus mi hendrerit nec.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__box item">
+                    <div class="about__tag">
+                        <img src="./assets/images/kayak.png" alt="" class="about__tag-img">
+                    </div>
+                    <img src="./assets/images/test_3.jpg" alt="" class="about__img">
+                    <div class="about__data">
+                        <div class="about__data-tag">
+                            <p class="about__name">CARLA SMITH</p>
+                            <span class="about__time">May 24, 2017</span>
+                        </div>
+                        <div class="about__data-quote">
+                            <p class="about__quote">" Best holliday ever "</p>
+                            <p class="about__quote-text">Nullam eu convallis tortor. Suspendisse potenti. In
+                                faucibus
+                                massa arcu, vitae cursus mi hendrerit nec.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__box item">
+                    <div class="about__tag">
+                        <img src="./assets/images/backpack.png" alt="" class="about__tag-img">
+                    </div>
+                    <img src="./assets/images/test_1.jpg" alt="" class="about__img">
+                    <div class="about__data">
+                        <div class="about__data-tag">
+                            <p class="about__name">CARLA SMITH</p>
+                            <span class="about__time">May 24, 2017</span>
+                        </div>
+                        <div class="about__data-quote">
+                            <p class="about__quote">" Best holliday ever "</p>
+                            <p class="about__quote-text">Nullam eu convallis tortor. Suspendisse potenti. In
+                                faucibus
+                                massa arcu, vitae cursus mi hendrerit nec.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__box item">
+                    <div class="about__tag">
+                        <img src="./assets/images/island_t.png" alt="" class="about__tag-img">
+                    </div>
+                    <img src="./assets/images/test_2.jpg" alt="" class="about__img">
+                    <div class="about__data">
+                        <div class="about__data-tag">
+                            <p class="about__name">CARLA SMITH</p>
+                            <span class="about__time">May 24, 2017</span>
+                        </div>
+                        <div class="about__data-quote">
+                            <p class="about__quote">" Best holliday ever "</p>
+                            <p class="about__quote-text">Nullam eu convallis tortor. Suspendisse potenti. In
+                                faucibus
+                                massa arcu, vitae cursus mi hendrerit nec.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__box item">
+                    <div class="about__tag">
+                        <img src="./assets/images/kayak.png" alt="" class="about__tag-img">
+                    </div>
+                    <img src="./assets/images/test_3.jpg" alt="" class="about__img">
+                    <div class="about__data">
+                        <div class="about__data-tag">
+                            <p class="about__name">CARLA SMITH</p>
+                            <span class="about__time">May 24, 2017</span>
+                        </div>
+                        <div class="about__data-quote">
+                            <p class="about__quote">" Best holliday ever "</p>
+                            <p class="about__quote-text">Nullam eu convallis tortor. Suspendisse potenti. In
+                                faucibus
+                                massa arcu, vitae cursus mi hendrerit nec.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--===== News / Trending =====-->
+        <section class="trending section" id="new">
+            <h2 class="trending-title">TRENDING NOW</h2>
+
+            <div class="trending__container bd-grid">
+                <div class="trending__box">
+                    <img src="./assets/images/trend_1.png" alt="" class="trending__img">
+                    <div class="trending__data">
+                        <a href="" class="trending__name">GRAND HOTEL</a>
+                        <p class="trending__price">From $182</p>
+                        <p class="trending__address">MADRID, SPAIN</p>
+                    </div>
+                </div>
+                <div class="trending__box">
+                    <img src="./assets/images/trend_2.png" alt="" class="trending__img">
+                    <div class="trending__data">
+                        <a href="" class="trending__name">MARS HOTEL</a>
+                        <p class="trending__price">From $192</p>
+                        <p class="trending__address">MADRID, SPAIN</p>
+                    </div>
+                </div>
+                <div class="trending__box">
+                    <img src="./assets/images/trend_3.png" alt="" class="trending__img">
+                    <div class="trending__data">
+                        <a href="" class="trending__name">QUEEN HOTEL</a>
+                        <p class="trending__price">From $182</p>
+                        <p class="trending__address">MADRID, SPAIN</p>
+                    </div>
+                </div>
+                <div class="trending__box">
+                    <img src="./assets/images/trend_4.png" alt="" class="trending__img">
+                    <div class="trending__data">
+                        <a href="" class="trending__name">MARS HOTEL</a>
+                        <p class="trending__price">From $182</p>
+                        <p class="trending__address">MADRID, SPAIN</p>
+                    </div>
+                </div>
+                <div class="trending__box">
+                    <img src="./assets/images/trend_5.png" alt="" class="trending__img">
+                    <div class="trending__data">
+                        <a href="" class="trending__name">GRAND HOTEL</a>
+                        <p class="trending__price">From $182</p>
+                        <p class="trending__address">MADRID, SPAIN</p>
+                    </div>
+                </div>
+                <div class="trending__box">
+                    <img src="./assets/images/trend_6.png" alt="" class="trending__img">
+                    <div class="trending__data">
+                        <a href="" class="trending__name">QUEEN HOTEL</a>
+                        <p class="trending__price">From $182</p>
+                        <p class="trending__address">MADRID, SPAIN</p>
+                    </div>
+                </div>
+                <div class="trending__box">
+                    <img src="./assets/images/trend_7.png" alt="" class="trending__img">
+                    <div class="trending__data">
+                        <a href="" class="trending__name">GRAND HOTEL</a>
+                        <p class="trending__price">From $182</p>
+                        <p class="trending__address">MADRID, SPAIN</p>
+                    </div>
+                </div>
+                <div class="trending__box">
+                    <img src="./assets/images/trend_8.png" alt="" class="trending__img">
+                    <div class="trending__data">
+                        <a href="" class="trending__name">MARS HOTEL</a>
+                        <p class="trending__price">From $182</p>
+                        <p class="trending__address">MADRID, SPAIN</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--===== CONTACT =====-->
+        <section class="contact" id="contact">
+            <div class="contact__container bd-grid">
+                <div class="contact__bg"></div>
+                <div class="contact__box bd-grid">
+                    <h3 class="contact__title">GET IN TOUCH</h3>
+                    <ul class="contact__menu">
+                        <li class="contact__item"><input type="text" class="contact__input" placeholder="Name..."></li>
+                        <li class="contact__item"><input type="text" class="contact__input" placeholder="Email..."></li>
+                        <li class="contact__item"><input type="text" class="contact__input" placeholder="Subject...">
+                        </li>
+                        <li class="contact__item"><textarea name="" id="" class="contact__input" cols="30" rows="4"
+                                placeholder="Message..."></textarea></li>
+                    </ul>
+                    <a href="#" class="contact__btn">SEND MESSAGE...</a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer section" id="footer">
+        <div class="footer__container bd-grid">
+            <div class="footer__box">
+                <a href="#" class="footer__logo">
+                    <img src="./assets/images/logo.png" alt=""><span>TRAVELIX</span>
+                </a>
+                <p class="footer__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vu
+                    lputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer eleme ntum orci eu vehicula
+                    pretium.</p>
+                <ul class="footer__social-list">
+                    <li class="footer__social-item"><a href="#"><i class='bx bxl-pinterest footer__social-icon'></i></a>
+                    </li>
+                    <li class="footer__social-item"><a href="#"><i
+                                class='bx bxl-facebook-circle footer__social-icon'></i></a></li>
+                    <li class="footer__social-item"><a href="#"><i class='bx bxl-twitter footer__social-icon'></i></a>
+                    </li>
+                    <li class="footer__social-item"><a href="#"><i class='bx bxl-dribbble footer__social-icon'></i></a>
+                    </li>
+                    <li class="footer__social-item"><a href="#"><i class='bx bxl-behance footer__social-icon'></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__box">
+                <h2 class="footer__title">BLOG POSTS</h2>
+
+                <div class="footer__content">
+                    <div class="footer__content-box">
+                        <img src="./assets/images/footer_blog_1.jpg" alt="" class="footer__img">
+                        <div class="footer__data">
+                            <a href="" class="footer__data-name">Travel with us this year</a>
+                            <p class="footer__data-time">Nov 29, 2017</p>
+                        </div>
+                    </div>
+                    <div class="footer__content-box">
+                        <img src="./assets/images/footer_blog_2.jpg" alt="" class="footer__img">
+                        <div class="footer__data">
+                            <a href="" class="footer__data-name">New destinations for you</a>
+                            <p class="footer__data-time">Nov 29, 2017</p>
+                        </div>
+                    </div>
+                    <div class="footer__content-box">
+                        <img src="./assets/images/footer_blog_3.jpg" alt="" class="footer__img">
+                        <div class="footer__data">
+                            <a href="" class="footer__data-name">Travel with us this year</a>
+                            <p class="footer__data-time">Nov 29, 2017</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__box">
+                <h2 class="footer__title">BLOG POSTS</h2>
+
+                <div class="footer__content">
+                    <ul class="footer__tag">
+                        <li><a href="" class="footer__btn">Design</a></li>
+                        <li><a href="" class="footer__btn">Fashion</a></li>
+                        <li><a href="" class="footer__btn">Music</a></li>
+                        <li><a href="" class="footer__btn">Video</a></li>
+                        <li><a href="" class="footer__btn">Party</a></li>
+                        <li><a href="" class="footer__btn">Photography</a></li>
+                        <li><a href="" class="footer__btn">adventure</a></li>
+                        <li><a href="" class="footer__btn">travel</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__box">
+                <h2 class="footer__title">CONTACTS INFO</h2>
+
+                <div class="footer__content">
+                    <ul class="footer__info">
+                        <li class="footer__info-item">
+                            <img src="./assets/images/placeholder.svg" alt="" class="footer__info-img">
+                            <div class="footer__info-text">Tan Phong, Q7, TPHCM</div>
+                        </li>
+                        <li class="footer__info-item">
+                            <img src="./assets/images/phone-call.svg" alt="" class="footer__info-img">
+                            <div class="footer__info-text">+84 000 000 000</div>
+                        </li>
+                        <li class="footer__info-item">
+                            <img src="./assets/images/message.svg" alt="" class="footer__info-img">
+                            <a href="" class="footer__info-link">asdasdasdxx00@gmail.com</a>
+                        </li>
+                        <li class="footer__info-item">
+                            <img src="./assets/images/planet-earth.svg" alt="" class="footer__info-img">
+                            <a href="" class="footer__info-link">www.github.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="footer__copy">&copy; 2021 PhuocDuy. All right reserved</p>
+    </footer>
+    <!-- MAIN JS -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- <script src="./assets/js/swiper-bundle.min.js"></script> -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

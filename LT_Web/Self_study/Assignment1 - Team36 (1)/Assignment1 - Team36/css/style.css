@@ -1,0 +1,310 @@
+.history, .contact {
+  margin-top: 50px;
+}
+
+/* Page history.html */
+
+body {
+  font-family: 'Texturina', serif !important;
+  background-color: #F5F5F5;
+  color: #484848 !important;
+  font-size: 1.1rem !important;
+}
+
+.timeline {
+  margin-top: 100px;
+}
+.timeline hr {
+  width: 90%;
+  border: 2px solid#484848;
+  margin-bottom: -63px;
+}
+.timeline ul {
+  padding-left: 0;
+}
+.timeline ul li {
+  margin: 0 auto;
+  font-weight: bold;
+  width: 14%;
+  transition: all 0.2s;
+  list-style: none;
+}
+.timeline ul li:hover {
+  color: #FFC600;
+  cursor: pointer;
+}
+
+.timeline ul li span {
+  font-weight: normal;
+}
+
+.content {
+  margin-top: 50px;
+}
+
+/* Page ourculture.html */
+section {
+  padding: 50px;
+}
+section .logo {
+  margin-top: 25px;
+}
+.bg-while {
+  background-color: #fff;
+}
+.quote {
+  font-family: 'Charm', cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Page contact.html */
+.contact {
+  min-height: 900px;
+}
+.contact p {
+  margin-bottom: 0;
+  padding: 10px;
+}
+p.stt {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+/* Tạo border right */
+.border-right {
+  border-right: 1px solid #F5F5F5;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5px;
+}
+
+h3.headquarter {
+  font-size: 1.25rem;
+  color: #F36F21;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+/* Page recruitment.html */
+.recruitment {
+  margin-top: 50px;
+  padding-top: 50px;
+}
+.recruitment h2 {
+  color: #F05A22;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+.recruitment ul {
+  padding: 0;
+}
+.recruitment section {
+  padding: 0;
+  margin-bottom: 50px;
+}
+.recruitment ul li.career {
+  list-style: none;
+}
+.recruitment ul li.active a {
+  font-weight: bold;
+  color: #F05A22 !important;
+}
+.recruitment ul li.career::before {
+  content: "\3E \020";
+}
+.recruitment ul li.career a {
+  color: initial;
+  text-decoration: none;
+}
+.recruitment ul li.career a:hover {
+  color: #F05A22;
+}
+
+.recruitment hr {
+  border-top: 1px dashed#ddd;
+}
+.recruitment .position p {
+  margin-bottom: 0;
+}
+.recruitment .position p.date, .recruitment .position p.address {
+  font-size: 90%;
+}
+.recruitment .position p.title {
+  font-weight: bold;
+}
+.recruitment .position p.title a {
+  color: inherit;
+  text-decoration: none;
+}
+.recruitment .position p.title a:hover {
+  color: #F05A22;
+}
+.recruitment .describe {
+  font-size: smaller;
+  margin-top: 15px;
+}
+.recruitment .describe h3 {
+  font-size: 1rem;
+  color: #F05A22;
+}
+.recruitment .describe ul {
+  padding-left: 15px;
+  list-style: none;
+}
+.recruitment .describe ul li::before {
+  content: "\A";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #484848;
+  display: inline-block;
+  margin-right: 10px;
+}
+.recruitment .form-group input::placeholder, .recruitment .form-group select {
+  color: #00acd4 !important;
+  font-size: smaller;
+  font-style: italic;
+}
+.recruitment .advice p {
+  font-size: smaller;
+}
+
+
+/* Page product.html */
+.product h2 {
+  font-size: 2rem;
+}
+.product .intro {
+  margin-bottom: 50px;
+}
+.product .title h3 {
+  color: #f36f21;
+  line-height: 70px;
+  padding-left: 10px;
+}
+.product .list-game .item-game {
+  border: 15px solid #F5F5F5;
+}
+.product .list-game h4 {
+  font-size: 1.125rem;
+}
+
+/* Style Footer */
+#footer {
+  min-height: 210px;
+  color: #fff;
+  padding: 25px;
+}
+#footer hr {
+  height: 1px;
+  background-color: #fff;
+}
+#footer .box-social ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer .box-social ul li {
+  list-style-type: none;
+  padding: 10px;
+}
+#footer .box-social img {
+  width: 37px;
+  height: 37px;
+}
+#footer .fa-phone {
+  transform: rotate(100deg);
+}
+#footer p {
+  font-size: 1rem;
+}
+#footer .fas {
+  color: #F40029;
+}
+#footer ul.time {
+  font-size: smaller;
+  padding: 0;
+}
+#footer .phone-number {
+  color: #fff;
+  padding-left: 62px;
+}
+#footer .phone-number p {
+  font-size: large;
+  margin-bottom: 25px;
+}
+#footer ul.time li {
+  list-style-type: none;
+}
+.nav_header {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: .1s;
+  height: 100px;
+}
+.nav_header .logo img {
+  height: 80px;
+}
+.nav_mobile .nav-item {
+  padding: 12px 20px;
+}
+.nav_mobile .nav-item.active {
+  background-color: #ec6707;
+}
+.nav_mobile .nav-item.active a {
+  font-weight: 500;
+  color: #fff;
+}
+.nav_mobile .nav-item a {
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.nav_mobile .nav-item .dropdown-menu {
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0;
+  border-bottom: 3px solid #f36f21;
+  transition: max-height .8s ease-in-out;
+  margin: 0;
+  padding: 0;
+}
+.nav_mobile .nav-item .dropdown-menu a {
+  padding: 20px;
+  box-shadow: inset 0 1px 0 #d7d7d7;
+  text-transform: capitalize;
+  color: #000000;
+  font-weight: 300;
+}
+.nav_mobile .nav-item .dropdown-menu a:hover {
+  background-color: #ec6707;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 767px) {
+  .ourculture img {width: 50%;}
+  .nav_mobile {
+    position: unset !important;
+  }
+  .nav_header {
+    position: relative;
+  }
+  .nav_mobile ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  .nav_mobile .nav-item .dropdown-menu {
+    top: 0;
+    left: 0;
+    transform: unset;
+    border: unset;
+  }
+  .nav_mobile .nav-item .dropdown-menu a {
+    box-shadow: unset;
+  }
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card mx-auto" style="max-width: 500px;">
+            <div class="card-header">
+                <h1 class="text-center">Register</h1>
+            </div>
+            <div class="card-body">
+                <form action="#">
+                    <div class="form-group">
+                        <label for="first-name" class="form-label">First Name</label>
+                        <input type="text" class="form-control js-first-name" id="first-name" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control js-last-name" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control js-email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control js-password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Birthday</label>
+                        <div class="row">
+                            <div class="col-4">
+                                <select class="form-select js-day">
+                                    <option selected>Day</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <select class="form-select js-month">
+                                    <option selected>Month</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <select class="form-select js-year">
+                                    <option selected>Year</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group js-gender">
+                        <label>Gender</label>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="male"
+                                        checked="checked">
+                                    <label class="form-check-label" for="male">
+                                        Male
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="female">
+                                    <label class="form-check-label" for="female">
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="other">
+                                    <label class="form-check-label" for="other">
+                                        Other
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Country</label>
+                        <select class="form-select js-country">
+                            <option selected>Viet Nam</option>
+                            <option>Australia</option>
+                            <option>United States</option>
+                            <option>India</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group ">
+                        <label for="about">About</label>
+                        <textarea name="about" id="about" rows="3" class="form-control js-about"></textarea>
+                    </div>
+                    <div class="form-group d-flex mt-2 justify-content-center">
+                        <button class="btn btn-primary me-2" type="submit" id="submit">Submit</button>
+                        <button class="btn btn-warning ms-2" id="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const $ = document.querySelector.bind(document);
+        const fname = $('.js-first-name');
+        const lname = $('.js-last-name');
+        const email = $('.js-email');
+        const password = $('.js-password');
+        const day = $('.js-day');
+        const month = $('.js-month');
+        const year = $('.js-year');
+        const about = $('.js-about');
+
+        var noDay = 31;
+
+        function checkLeapYear(year) {
+            if (year % 4 != 0) {
+                return false;
+            } else if (year % 400 == 0) {
+                return true;
+            } else if (year % 100 == 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function getNoDay() {
+            monthVal = month.value;
+            yearVal = year.value;
+            if (monthVal == 2) {
+                if (checkLeapYear(yearVal)) noDay = 29;
+                else noDay = 28;
+            }
+            else if (monthVal == 4 || monthVal == 6 || monthVal == 9 || monthVal == 11) noDay = 30;
+            else noDay = 31;
+        }
+
+        function renderDay() {
+            for (let i = 0; i < noDay; i++) {
+                const opt = document.createElement('option');
+                opt.innerHTML = i + 1;
+                opt.value = i + 1;
+                day.appendChild(opt);
+            }
+        }
+
+        function changeDay() {
+            const oldNoDay = noDay;
+            getNoDay();
+            if (oldNoDay != noDay) {
+                if (noDay > oldNoDay) {
+                    for (let i = 0; i < noDay - oldNoDay; i++) {
+                        const opt = document.createElement('option');
+                        opt.innerHTML = oldNoDay + i + 1;
+                        opt.value = oldNoDay + i + 1;
+                        day.appendChild(opt);
+                    }
+                }
+                else {
+                    for (let i = 0; i < oldNoDay - noDay; i++) {
+                        day.removeChild(day.querySelector('option:last-child'));
+                    }
+                }
+            }
+        }
+
+        getNoDay();
+        renderDay();
+
+        month.addEventListener('change', changeDay)
+
+        year.addEventListener('change', changeDay)
+
+
+
+        for (let i = 0; i < 12; i++) {
+            const opt = document.createElement('option');
+            opt.innerHTML = i + 1;
+            opt.value = i + 1;
+            month.appendChild(opt);
+        }
+
+        var currDay = new Date();
+        for (let i = currDay.getFullYear(); i >= 1930; i--) {
+            const opt = document.createElement('option');
+            opt.innerHTML = i;
+            opt.value = i;
+            year.appendChild(opt);
+        }
+
+
+        function validate() {
+            var err = '';
+            if (fname.value.length < 2 || fname.value.length > 30) err += 'Tên phải có độ dài từ 2 - 30 kí tự. ';
+            if (lname.value.length < 2 || lname.value.length > 30) err += 'Họ phải có độ dài từ 2 - 30 kí tự. ';
+            var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (!regex.test(email.value)) err += 'Email không đúng định dạng. ';
+            if (password.value.length < 2 || password.value.length > 30) err += 'Password phải có độ dài từ 2 - 30 kí tự. ';
+            if (day.value == 'Day') err += 'Thiếu ngày sinh. ';
+            if (month.value == 'Month') err += 'Thiếu tháng sinh. ';
+            if (year.value == 'Year') err += 'Thiếu năm sinh. ';
+            if (about.value.length > 1000) err += 'About chỉ giới hạn 1000 kí tự.';
+            return err;
+        }
+
+        const submit = $('#submit');
+        submit.addEventListener('click', (e) => {
+            e.preventDefault();
+            var err = '';
+            err = validate();
+            if (err == '') alert("Completed!");
+            else alert(err);
+        })
+
+        const reset = $('#reset');
+        reset.addEventListener('click', (e) => {
+            e.preventDefault();
+            fname.value = lname.value = email.value = password.value = about.value = '';
+            day.value = 'Day'; month.value = 'Month'; year.value = 'Year';
+            $('#male').checked = 'checked';
+            $('.js-country').value = 'Viet Nam';
+        })
+    </script>
+</body>
+
+</html>

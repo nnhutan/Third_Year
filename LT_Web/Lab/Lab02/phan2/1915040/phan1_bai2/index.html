@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="header bg-info bg-gradient mb-2 py-2 fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-md-8 col-6">
+                    <div class="header-left d-flex align-items-center">
+                        <!-- when use mobile -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-list icon-list text-black-50" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+
+                        <div class="menu-in-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-x-lg close-icon" viewBox="0 0 16 16">
+                                <path
+                                    d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z" />
+                            </svg>
+                            <div class="category">
+                                <h4 class="left-sidebar__title text-center border m-0 py-2 rounded-2 bg-light">Category
+                                </h4>
+                                <div class="category-list list-group">
+                                    <a href="#" class="list-group-item list-group-item-action">Item 1 ...</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Item 2 ...</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Item 3 ...</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Item 4 ...</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Item 5 ...</a>
+                                </div>
+                            </div>
+                            <div class="top-products">
+                                <h4 class="left-sidebar__title text-center border m-0 py-2 rounded-2 bg-light">Top
+                                    Products
+                                </h4>
+                                <div class="top-products-list list-group">
+                                    <a href="#" class="list-group-item list-group-item-action">Item 1 ...</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Item 2 ...</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Item 3 ...</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Item 4 ...</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Item 5 ...</a>
+                                </div>
+                            </div>
+                            <ul class="nav justify-content-center p-2">
+                                <li class="nav-item d-flex align-items-center">
+                                    <a class="nav-link p-0" aria-current="page" href="#">Category</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center mx-2">
+                                    <a class="nav-link p-0" href="#">Contact us</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center">
+                                    <a class="nav-link p-0" href="#">Follow us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/ when use mobile-->
+                        <h1 class="header-logo margin-0 me-4 text-white fw-bolder"><span
+                                style="color: #fff700">Tan</span>Shop</h1>
+                        <ul class="nav justify-content-center hidden">
+                            <li class="nav-item d-flex align-items-center ">
+                                <a class="nav-link text-light p-0" aria-current="page" href="#">Category</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center mx-2">
+                                <a class="nav-link text-light p-0" href="#">Contact us</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <a class="nav-link text-light p-0" href="#">Follow us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 col-6 d-flex align-items-center justify-content-end">
+                    <div class="header-right w-100 position-relative">
+                        <input type="text" class="form-control rounded-pill" placeholder="Search...">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search position-absolute end-0 top-50 translate-middle-y me-3"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container main-container">
+        <div class="main d-flex">
+            <div class="left-sidebar hidden">
+                <div class="category">
+                    <h4 class="left-sidebar__title text-center border m-0 py-2 rounded-2 bg-info bg-gradient"
+                        style="--bs-bg-opacity: .75;">Category</h4>
+                    <div class="category-list list-group">
+                        <a href="#" class="list-group-item list-group-item-action">Item 1 ...</a>
+                        <a href="#" class="list-group-item list-group-item-action">Item 2 ...</a>
+                        <a href="#" class="list-group-item list-group-item-action">Item 3 ...</a>
+                        <a href="#" class="list-group-item list-group-item-action">Item 4 ...</a>
+                        <a href="#" class="list-group-item list-group-item-action">Item 5 ...</a>
+                    </div>
+                </div>
+                <div class="top-products">
+                    <h4 class="left-sidebar__title text-center border m-0 py-2 rounded-2 bg-info bg-gradient"
+                        style="--bs-bg-opacity: .75;">Top Products
+                    </h4>
+                    <div class="top-products-list list-group">
+                        <a href="#" class="list-group-item list-group-item-action">Item 1 ...</a>
+                        <a href="#" class="list-group-item list-group-item-action">Item 2 ...</a>
+                        <a href="#" class="list-group-item list-group-item-action">Item 3 ...</a>
+                        <a href="#" class="list-group-item list-group-item-action">Item 4 ...</a>
+                        <a href="#" class="list-group-item list-group-item-action">Item 5 ...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="content flex-grow-1">
+                <div class="container">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Main Category</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Sub Category</li>
+                        </ol>
+                    </nav>
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 col-12">
+                            <img src="https://cf.shopee.vn/file/875ec8b4aefea5fe8091981b6adf1c3c" class="w-100"
+                                alt="product">
+                            <div class="slider mt-2 d-none d-md-block">
+                                <div class="row">
+                                    <div class="col-xl-3 col-md-3"><img
+                                            src="https://cf.shopee.vn/file/875ec8b4aefea5fe8091981b6adf1c3c"
+                                            class="w-100" alt="product"></div>
+                                    <div class="col-xl-3 col-md-3"><img
+                                            src="https://cf.shopee.vn/file/875ec8b4aefea5fe8091981b6adf1c3c"
+                                            class="w-100" alt="product"></div>
+                                    <div class="col-xl-3 col-md-3"><img
+                                            src="https://cf.shopee.vn/file/875ec8b4aefea5fe8091981b6adf1c3c"
+                                            class="w-100" alt="product"></div>
+                                    <div class="col-xl-3 col-md-3"><img
+                                            src="https://cf.shopee.vn/file/875ec8b4aefea5fe8091981b6adf1c3c"
+                                            class="w-100" alt="product"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-12">
+                            <h2 class="">
+                                Sample Product Title
+                            </h2>
+                            <h5 class="fw-bolder">Summary:</h5>
+                            <p class="lh-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod
+                                tempor
+                                incididunt ut labore et dolore magna
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ad minim
+                                veniam.
+                            </p>
+                            <div class="d-flex justify-content-center mt-md-3 mt-xl-5"> <a href="#"
+                                    class="btn btn-primary px-5 py-2 rounded-pill">Buy
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="fw-bolder mt-3">Description:</h5>
+                    <p class="m-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                    <p class="m-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                    <p class="m-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                    <p class="m-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+                </div>
+            </div>
+            <div class="right-sidebar hidden d-md-none d-xl-block">
+                <img src="https://www.bannereasy.com/assets/templates/1/986.png" alt="banner">
+            </div>
+        </div>
+    </div>
+    <div class="footer bg-secondary bg-gradient py-3 " style="--bs-bg-opacity: .3;">
+        <div class="text-center">
+            <h5 class="mb-1">Footer Information ...</h5>
+            <ul class="nav justify-content-center">
+                <li class="nav-item d-flex align-items-center me-2">
+                    <a class="nav-link p-0" aria-current="page" href="#">Link 1</a>
+                </li>
+                <li class="nav-item d-flex align-items-center me-2">
+                    <a class="nav-link p-0" href="#">Link 2</a>
+                </li>
+                <li class="nav-item d-flex align-items-center me-2">
+                    <a class="nav-link p-0" href="#">Link 3</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

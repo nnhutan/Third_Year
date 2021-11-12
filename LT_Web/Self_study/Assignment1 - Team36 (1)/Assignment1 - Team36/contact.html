@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>VĂN PHÒNG</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Charm&family=Texturina:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Charm&family=Texturina:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="nav_header">
+    <div class="container h-100">
+      <div class="logo h-100 d-flex align-items-center justify-content-between">
+        <a href="./HomePage.html">
+          <img src="./images/vng-logo.png" alt="logovng" />
+        </a>
+        <nav class="nav_mobile navbar navbar-expand-lg">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fal fa-bars"></i>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./HomePage.html">trang chủ</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  chúng tôi
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="./history.html">lịch sử</a>
+                  <a class="dropdown-item" href="./ourculture.html">văn hoá doanh nghiệp</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./product.html">sản phẩm</a>
+              </li>
+              <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  liên hệ
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                  <a class="dropdown-item" href="./contact.html">văn phòng</a>
+                  <a class="dropdown-item" href="./recruitment.html">tuyển dụng</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="container contact text-center">
+    <div class="row bg-while mb-3 mb-md-2">
+      <div class="d-none d-lg-block col-1 border-right m-auto">
+        <p class="stt">1</p>
+      </div>
+      <div class="col-8 col-md-3 border-right order-1 m-auto">
+        <h3 class="headquarter d-flex d-md-block"><i class="fas fa-map-marker-alt pr-2 pr-md-0 pr-2 pr-md-0"></i><br class="d-none d-md-block">TRỤ SỞ CHÍNH HCM</h3>
+      </div>
+      <div class="col-12 col-md-6 border-right order-3 order-md-2 m-auto">
+        <p>Lô 03b-04-05-06-07, đường số 13, khu Công Nghiệp, Khu Chế Xuất Tân Thuận, phường Tân Thuận Đông, Quận 7, TP.HCM.</p>
+      </div>
+      <div class="col-4 col-md-2 order-2 order-md-3 m-auto">
+        <button onclick="displayMap(1)" class="btn btn-outline-secondary">Xem bản đồ</button>
+      </div>
+    </div>
+
+    <div class="row bg-while mb-3 mb-md-2">
+      <div class="d-none d-lg-block col-1 border-right m-auto">
+        <p class="stt">2</p>
+      </div>
+      <div class="col-8 col-md-3 border-right order-1 m-auto">
+        <h3 class="headquarter"><i class="fas fa-map-marker-alt pr-2 pr-md-0"></i><br class="d-none d-md-block">VĂN PHÒNG HÀ NỘI</h3>
+      </div>
+      <div class="col-12 col-md-6 border-right order-3 order-md-2 m-auto">
+        <p>Tầng 17, tòa nhà VP TNR-Tower, 54 Nguyễn Chí Thanh, Đống Đa, Hà Nội.</p>
+      </div>
+      <div class="col-4 col-md-2 order-2 order-md-3 m-auto">
+        <button onclick="displayMap(2)" class="btn btn-outline-secondary">Xem bản đồ</button>
+      </div>
+    </div>
+
+    <div class="row bg-while mb-3 mb-md-2">
+      <div class="d-none d-lg-block col-1 border-right m-auto">
+        <p class="stt">3</p>
+      </div>
+      <div class="col-8 col-md-3 border-right order-1 m-auto">
+        <h3 class="headquarter"><i class="fas fa-map-marker-alt pr-2 pr-md-0"></i><br class="d-none d-md-block">VĂN PHÒNG ĐÀ NẴNG</h3>
+      </div>
+      <div class="col-12 col-md-6 border-right order-3 order-md-2 m-auto">
+        <p>Tầng 9, Khu phức hợp khách sạn Bạch Đằng Complex, 50 Bạch Đằng, quận Hải Châu, Đà Nẵng.</p>
+      </div>
+      <div class="col-4 col-md-2 order-2 order-md-3 m-auto">
+        <button onclick="displayMap(3)" class="btn btn-outline-secondary">Xem bản đồ</button>
+      </div>
+    </div>
+
+    <div class="row bg-while mb-3 mb-md-2">
+      <div class="d-none d-lg-block col-1 border-right m-auto">
+        <p class="stt">4</p>
+      </div>
+      <div class="col-8 col-md-3 border-right order-1 m-auto">
+        <h3 class="headquarter"><i class="fas fa-map-marker-alt pr-2 pr-md-0"></i><br class="d-none d-md-block">VĂN PHÒNG HCM</h3>
+      </div>
+      <div class="col-12 col-md-6 border-right order-3 order-md-2 m-auto">
+        <p>Tầng 13, 14, Toà nhà Sài Gòn Giải Phóng, 432 Nguyễn Thị Minh Khai, Phường 5, Quận 3, TP.HCM</p>
+      </div>
+      <div class="col-4 col-md-2 order-2 order-md-3 m-auto">
+        <button onclick="displayMap(4)" class="btn btn-outline-secondary">Xem bản đồ</button>
+      </div>
+    </div>
+
+    <div class="row bg-while mb-3 mb-md-2">
+      <div class="d-none d-lg-block col-1 border-right m-auto">
+        <p class="stt">5</p>
+      </div>
+      <div class="col-8 col-md-3 border-right order-1 m-auto">
+        <h3 class="headquarter"><i class="fas fa-map-marker-alt pr-2 pr-md-0"></i><br class="d-none d-md-block">VĂN PHÒNG THÁI LAN</h3>
+      </div>
+      <div class="col-12 col-md-6 border-right order-3 order-md-2 m-auto">
+        <p>Phòng 1704, Tầng 17, Toà nhà UBCII, 591 Đường Sukhumvit 33 , Phường Klongton Nue, Quận Wattana, Bangkok, Thái Lan.</p>
+      </div>
+      <div class="col-4 col-md-2 order-2 order-md-3 m-auto">
+        <button onclick="displayMap(5)" class="btn btn-outline-secondary">Xem bản đồ</button>
+      </div>
+    </div>
+
+    <div class="row bg-while mb-3 mb-md-2">
+      <div class="d-none d-lg-block col-1 border-right m-auto">
+        <p class="stt">6</p>
+      </div>
+      <div class="col-8 col-md-3 border-right order-1 m-auto">
+        <h3 class="headquarter"><i class="fas fa-map-marker-alt pr-2 pr-md-0"></i><br class="d-none d-md-block">VĂN PHÒNG MYANMAR</h3>
+      </div>
+      <div class="col-12 col-md-6 border-right order-3 order-md-2 m-auto">
+        <p>Tầng 22, Tháp 1, Tòa nhà HAGL Myanmar Center, 192 Kaba Aye Pagoda, Thị trấn Bahan, TP. Yangon, Myanmar</p>
+      </div>
+      <div class="col-4 col-md-2 order-2 order-md-3 m-auto">
+        <button onclick="displayMap(6)" class="btn btn-outline-secondary">Xem bản đồ</button>
+      </div>
+    </div>
+
+    <div class="row bg-while mb-3 mb-md-2">
+      <div class="d-none d-lg-block col-1 border-right m-auto">
+        <p class="stt">7</p>
+      </div>
+      <div class="col-8 col-md-3 border-right order-1 m-auto">
+        <h3 class="headquarter"><i class="fas fa-map-marker-alt pr-2 pr-md-0"></i><br class="d-none d-md-block"> DATACENTER</h3>
+      </div>
+      <div class="col-12 col-md-6 border-right order-3 order-md-2 m-auto">
+        <p>Toà nhà Helios, Lô 6, Đường số 3, Công Viên Phần Mềm Quang Trung, Phường Tân Chánh Hiệp, Quận 12, TP.HCM</p>
+      </div>
+      <div class="col-4 col-md-2 order-2 order-md-3 m-auto">
+        <button onclick="displayMap(7)" class="btn btn-outline-secondary">Xem bản đồ</button>
+      </div>
+    </div>
+  </div>
+  <div class="map fixed-bottom">
+    <iframe class="d-none" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7839.382510755244!2d106.745722!3d10.758261!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x44c31d92ca50b338!2sVNG%20Campus!5e0!3m2!1sen!2sus!4v1606462287233!5m2!1sen!2sus"  height="300" style="border:0; width:100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe class="d-none" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7448.462258788802!2d105.809186!3d21.023436!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6a0bb2b51049b13b!2sTNR%20Tower%20Nguy%E1%BB%85n%20Ch%C3%AD%20Thanh!5e0!3m2!1svi!2sus!4v1606467756729!5m2!1svi!2sus" height="300" style="border:0; width:100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe class="d-none" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7667.721740404079!2d108.224129!3d16.072708!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142183037a1ea2d%3A0xcbbcaafceeeb7d9c!2zNTAgQuG6oWNoIMSQ4bqxbmcsIEjhuqNpIENow6J1IDEsIEjhuqNpIENow6J1LCDEkMOgIE7hurVuZyA1NTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2sus!4v1606467966181!5m2!1svi!2sus" height="300" style="border:0; width:100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe class="d-none" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7839.087914391423!2d106.685513!3d10.769587!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x63d6ecac6f5ebc74!2sTu%20Du%20Hospital!5e0!3m2!1sen!2sus!4v1606468030630!5m2!1sen!2sus" height="300" style="border:0; width:100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe class="d-none" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7751.530020652373!2d100.56753!3d13.732672!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf9b869ab785a06ee!2sUnited%20Business%20Centre%20II!5e0!3m2!1svi!2sus!4v1606468079078!5m2!1svi!2sus" height="300" style="border:0; width:100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe class="d-none" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3818.9783924259964!2d96.155198!3d16.827428!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c193565fa0e07b%3A0x268a606b26ec677c!2s192%20Kabar%20Aye%20Pagoda%20Rd%2C%20Yangon%2C%20Myanmar%20(Burma)!5e0!3m2!1sen!2sus!4v1606468150614!5m2!1sen!2sus" height="300" style="border:0; width:100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe class="d-none" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62694.96138789657!2d106.626008!3d10.854475000000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x68199c1e17631ce1!2sHelios%20Building!5e0!3m2!1sen!2sus!4v1606468204685!5m2!1sen!2sus" height="300" style="border:0; width:100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+  <footer id="footer" style="background: url(images/footer-bg.jpg) 0 0/cover no-repeat">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>CÔNG TY CỔ PHẦN VNG</h2>
+        </div>
+        <div class="col-md-6 box-social">
+          <ul>
+            <li><a href="#"><img src="images/facebook.png" alt="fb" ></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt="twitt" ></a></li>
+            <li><a href="#"><img src="images/g-plus.png" alt="gplus"></a></li>
+            <li><a href="#"><img src="images/youtube.png" alt="youtube" ></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-md-4">
+          <p><i class="fas fa-map-marker-alt"></i> 172 Hà Chương, P. Trung Mỹ Tây, Q.12, Tp.HCM</p>
+          <p><i class="fas fa-phone"></i> 0899 311 211 - 0948 140 239</p>
+        </div>
+        <div class="col-md-4">
+          <p><i class="fas fa-file-alt"></i> Mã số thuế: 0314521395</p>
+          <p><i class="fas fa-envelope"></i> info@webchuyennghiep.vn</p>
+        </div>
+        <div class="col-md-4 phone-number" style="background: url(images/support-bg.png) left center no-repeat;">
+          <p>Hỗ trợ tư vấn: 0899 311 211</p>
+          <div>
+            <ul class="time d-flex">
+              <li>T2-T6 (8:00 – 17:00)</li>
+              <li style="padding-left: 20px;">T7 (8:00 - 12:00)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="js/fun.js"></script>
+</body>
+</html>

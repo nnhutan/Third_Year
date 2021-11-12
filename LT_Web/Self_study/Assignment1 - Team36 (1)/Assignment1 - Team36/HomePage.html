@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Charm&family=Texturina:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/homepage.css">
+  <title>TRANG CHỦ</title>
+</head>
+<body>
+  <nav class="justify-content-between align-items-center">
+    <div class="VNG_mobile d-block d-md-none pl-3">VNG</div>
+    <div class="partControl" id="controlNav" onClick="showNavbar()">
+      <svg id="hamburger" width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-justify" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+      <svg id="x" width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-x" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+      </svg>
+    </div>
+  </nav>
+  <div id="nav">
+    <div class="row page_top">
+      <div class="col-6 d-none d-md-block" id="navLeft">VNG</div>
+      <div class="col-12 col-md-6" id="navRight">
+        <ul class="nav flex-column justify-content-center align-items-center mt-5">
+          <li class="nav-item">
+            <a class="nav-link nav-title"  href="./HomePage.html">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-title" href="./history.html">Chúng tôi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-title" href="./product.html">Sản phẩm</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-title" href="./contact.html">Kết nối</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="page_top container-fluid px-0">
+    <section id="header">
+      <img class="swingimage" src="images/carousel/swing.png" alt="swing"/>
+      <div id="carouselHeader" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselHeader" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselHeader" data-slide-to="1"></li>
+          <li data-target="#carouselHeader" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <img class="d-none d-md-block" id="logoVNG" src="images/carousel/vng-logo-trademark-only.png" alt="Logo">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="images/carousel/h1.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <video id="video" autoplay src="https://img.zing.vn/products/vng/skin-2018/images/slides/video.mp4"></video>
+            <div class="carousel-caption d-none d-md-block">
+              <h4>Kiến tạo công nghệ và phát triển con người. <br>Vì một cuộc sống tốt đẹp hơn.</h4>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/carousel/h2.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselHeader" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselHeader" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+    <div class="section2">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3 pl-0 pl-md-3">
+            <div class="inner-circle"><span>5000</span></div>
+            <div class="content">
+              <p><b>TỶ</b><br>doanh thu năm 2020</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 pr-0 pr-md-3">
+            <div class="inner-circle"><span>16</span></div>
+            <div class="content">
+              <p><b>NĂM</b><br>hình thành và phát triển</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 pl-0 pl-md-3">
+            <div class="inner-circle"><span>11</span></div>
+            <div class="content">
+              <p><b>VĂN PHÒNG</b><br>tại các quốc gia</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 pr-0 pr-md-3">
+            <div class="inner-circle"><span>4</span></div>
+            <div class="content">
+              <p><b>NHÓM</b><br>sản phẩm chủ lực</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section3">
+      <div class="headerResponsive">
+        <div class="titleHeader">
+          <h2 class="titleSection">Sản phẩm</h2>
+          <p>Các lĩnh vực hoạt động tập trung vào 4 nhóm sản phẩm chủ lực, mang đến cho người dùng những trải nghiệm phong phú và đơn giản hơn.</p>
+        </div>
+        <div class="rowProductResponsive">
+          <div class="icon mx-4" onClick="currentSlide(1)">
+            <img src="images/sanpham/icon1.svg" alt="Icon1">
+          </div>
+          <div class="icon mx-4" onClick="currentSlide(2)">
+            <img src="images/sanpham/icon2.svg" alt="Icon2">
+          </div>
+          <div class="icon mx-4" onClick="currentSlide(3)">
+            <img src="images/sanpham/03.svg" alt="Icon3">
+          </div>
+          <div class="icon mx-4" onClick="currentSlide(4)">
+            <img src="images/sanpham/icon4.svg" alt="Icon4">
+          </div>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-12 col-xl-6 sectionCollapse">
+          <div class="slideProduct">
+            <div class="card text-center">
+              <img class="card-img-top floating" src="images/sanpham/digital-content.png" alt="Digital content">
+              <div class="card-body">
+                <p class="card-text">Phát triển và sản xuất trò chơi trực tuyến, phát hành ra thị trường quốc tế. Nhập khẩu và Phát hành các trò chơi nổi tiếng thế giới.</p>
+                <a href="#" class="btn btnXem">Xem thêm<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M256,480
+                  C132.288,480,32,379.712,32,256S132.288,32,256,32s224,100.288,224,224S379.712,480,256,480z"></path><circle cx="256" cy="256" r="32"></circle><circle cx="368" cy="256" r="32"></circle><circle cx="144" cy="256" r="32"></circle></g></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="slideProduct">
+            <div class="card text-center">
+              <img class="card-img-top floating" src="images/sanpham/communication.png" alt="Communication">
+              <div class="card-body">
+                <p class="card-text">Các nền tảng kết nối đa dạng, đa dịch vụ, phục vụ toàn diện nhu cầu kết nối, giải trí, tìm kiếm của cá nhân và tổ chức.</p>
+                <a href="#" class="btn btnXem">Xem thêm<svg version="1.1" id="Capa_113" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M256,480
+                  C132.288,480,32,379.712,32,256S132.288,32,256,32s224,100.288,224,224S379.712,480,256,480z"></path><circle cx="256" cy="256" r="32"></circle><circle cx="368" cy="256" r="32"></circle><circle cx="144" cy="256" r="32"></circle></g></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="slideProduct">
+            <div class="card text-center">
+              <img class="card-img-top floating" src="images/sanpham/digital-pay.png" alt="Digital pay">
+              <div class="card-body">
+                <p class="card-text">Các nền tảng và dịch vụ trung gian thanh toán, tài chính cá nhân theo xu hướng mới.</p>
+                <a href="#" class="btn btnXem">Xem thêm<svg version="1.1" id="Capa_114" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M256,480
+                  C132.288,480,32,379.712,32,256S132.288,32,256,32s224,100.288,224,224S379.712,480,256,480z"></path><circle cx="256" cy="256" r="32"></circle><circle cx="368" cy="256" r="32"></circle><circle cx="144" cy="256" r="32"></circle></g></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="slideProduct">
+            <div class="card text-center">
+              <img class="card-img-top floating" src="images/sanpham/smartcity.png" alt="Digital pay">
+              <div class="card-body">
+                <p class="card-text">Cung cấp các dịch vụ đám mây toàn diện cho tổ chức, doanh nghiệp, địa phương. Các hệ thống, giải pháp công nghệ thông minh dựa trên kết nối Internet và công nghệ đám mây.</p>
+                <a href="#" class="btn btnXem">Xem thêm<svg version="1.1" id="Capa_115" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M256,480
+                  C132.288,480,32,379.712,32,256S132.288,32,256,32s224,100.288,224,224S379.712,480,256,480z"></path><circle cx="256" cy="256" r="32"></circle><circle cx="368" cy="256" r="32"></circle><circle cx="144" cy="256" r="32"></circle></g></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 contentProduct">
+          <div class="titleHeader">
+            <h2 class="titleSection">Sản phẩm</h2>
+            <p>Các lĩnh vực hoạt động tập trung vào 4 nhóm sản phẩm chủ lực, mang đến cho người dùng những trải nghiệm phong phú và đơn giản hơn.</p>
+          </div>
+          <div class="row no-gutters titleProduct product1" onClick="currentSlide(1)">
+            <div class="icon mx-4">
+              <img src="images/sanpham/icon1.svg" alt="Icon1">
+            </div>
+            <div class="col-10">
+              <span>Trò chơi trực tuyến</span>
+            </div>
+          </div>
+          <div class="row no-gutters titleProduct product2" onClick="currentSlide(2)">
+            <div class="icon mx-4">
+              <img src="images/sanpham/icon2.svg" alt="Icon2">
+            </div>
+            <div class="col-10"><span>Nền tảng kết nối</span></div>
+          </div>
+          <div class="row no-gutters titleProduct product3" onClick="currentSlide(3)">
+            <div class="icon mx-4 ">
+              <img src="images/sanpham/03.svg" alt="Icon3">
+            </div>
+            <div class="col-10"><span>Thanh toán và tài chính</span></div>
+          </div>
+          <div class="row no-gutters titleProduct product4" onClick="currentSlide(4)">
+            <div class="icon mx-4">
+              <img src="images/sanpham/icon4.svg" alt="Icon4">
+            </div>
+            <div class="col-10"><span>Dịch vụ đám mây</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sectionVNG text-center py-5">
+      <h2 class="titleSection">Chúng tôi là VNG</h2>
+      <p>Thành lập ngày 9/9/2004, VNG hiện là công ty Internet và công nghệ hàng đầu, kỳ lân công nghệ 1 tỷ USD + duy nhất của Việt Nam.</p>
+      <div class="py-2 uk-position-relative uk-visible-toggle uk-light" id="uk1" tabindex="-1" uk-slider>
+        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-grid uk-child-width-1-3@m">
+          <li>
+            <div class="uk-panel">
+              <img src="images/chungta/hinh1.jpg" alt="hinh1">
+            </div>
+          </li>
+          <li>
+            <div class="uk-panel">
+              <img src="images/chungta/hinh2.jpg" alt="hinh2">
+            </div>
+          </li>
+          <li>
+            <div class="uk-panel">
+              <img src="images/chungta/hinh3.jpg" alt="hinh3">
+            </div>
+          </li>
+          <li>
+            <div class="uk-panel">
+              <img src="images/chungta/hinh4.jpg" alt="hinh4">
+            </div>
+          </li>
+        </ul>
+        <a class="pre uk-position-center-left uk-position-small" id="pre1" href="#" ></a>
+        <a class="next uk-position-center-right uk-position-small " id="next1" href="#" ></a>
+      </div>
+    </section>
+    <section class="sectionSuKien py-4" onscroll="ScrollUpSuKien">
+      <h2 class="titleSection text-center pb-4">
+        Tin tức & sự kiện
+      </h2>
+      <div class="row no-gutters rowSuKien">
+        <div class="col-12 col-xs-6 col-sm-6 col-md-3 col-lg-3 px-2 pb-5">
+          <div class="card text-center">
+            <img class="card-img-top" src="images/tintuc-sukien/h1.jpg" alt="Hinh tin tuc 1">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-warning">24-12-2019</h6>
+              <h4 class="card-title text-uppercase">Nhân viên ra mắt ca khúc giáng sinh.</h4>
+              <p class="card-text">
+                Thưởng thức "siêu phẩm" MV ca nhạc Giáng Sinh do chính Starters...</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xs-6 col-sm-6 col-md-3 col-lg-3 px-2 pb-5">
+          <div class="card text-center">
+            <img class="card-img-top" src="images/tintuc-sukien/hsukien.jpg" alt="Hinh tin tuc 2">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-warning">13-12-2019</h6>
+              <h4 class="card-title text-uppercase">Cloud tech day - Giải mã bài toán</h4>
+              <p class="card-text">
+                Ông Vũ Minh Trí, CEO nhấn mạnh "Các doanh nghiệp cần hiểu rõ vấn đề của mình, từ..."</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xs-6 col-sm-6 col-md-3 col-lg-3 px-2 pb-5">
+          <div class="card text-center">
+            <img class="card-img-top" src="images/tintuc-sukien/h3.jpg" alt="Hinh tin tuc 3">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-warning">12-12-2019</h6>
+              <h4 class="card-title text-uppercase">11 Doanh nghiệp thành lập CLB Điện toán đám mây</h4>
+              <p class="card-text">
+                Tại sự kiện Internet Day 2019, VNG, Viettel CHT, CMC Telecom cùng với các doanh nghiệp Internet...</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xs-6 col-sm-6 col-md-3 col-lg-3 px-2 pb-5">
+          <div class="card text-center">
+            <img class="card-img-top" src="images/tintuc-sukien/h4.jpg" alt="Hinh tin tuc 4">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-warning">13-12-2019</h6>
+              <h4 class="card-title text-uppercase">Tuyên bố thành nhà phát triển toàn cầu.</h4>
+              <p class="card-text">
+                Trở thành nhà phát triển toàn cầu, ngoài khu vực ASEAN còn hướng đến khu vực châu Mỹ...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <a href="#" class="btnXemThem text-center text-uppercase m-4">
+          <span class="textXemThem">Xem thêm
+            <svg class="ml-2" version="1.1" id="Capa_118" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M256,480
+              C132.288,480,32,379.712,32,256S132.288,32,256,32s224,100.288,224,224S379.712,480,256,480z"></path><path d="M219.2,116.8l-22.56,22.56L313.44,256L196.8,372.8l22.56,22.56l127.84-128c6.204-6.241,6.204-16.319,0-22.56L219.2,116.8z"></path></g></svg>
+          </span>
+        </a>
+    </section>
+    <section class="sectionNgheNghiep text-center" id="sectionNgheNghiep">
+      <div class="contentNN">
+        <h2 class="titleSection">Cơ hội nghề nghiệp</h2>
+        <p>Chúng tôi luôn chào đón các ứng viên hoài bão, mong muốn dấn thân vào lĩnh vực Internet, yêu thích làm việc trong một môi trường năng động, trẻ trung và đầy thử thách.</p>
+        <div class="linkNN">
+          <a href="#" class="btn btn-warning text-uppercase">Ứng tuyển ngay</a>
+        </div>
+      </div>
+    </section>
+    <section class="sectionDoiTac py-4 text-center">
+      <h2 class="titleSection">Đối tác</h2>
+      <p class="pb-5"> 
+        Danh sách đối tác ngày càng dài thêm là minh chứng cho mối quan hệ hợp tác hiệu quả giữa VNG cùng các đối tác tại Việt Nam và nhiều quốc gia trên thế giới. VNG tự hào được kể tên các thương hiệu nổi tiếng mà VNG đã và đang hợp tác.
+      </p>
+      <div class="py-2 uk-position-relative uk-visible-toggle uk-light" id="uk2" tabindex="-1">
+        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-grid uk-child-width-1-4@m">
+          <li>
+            <div class="uk-panel">
+              <img src="images/doitac/cj.png" alt="">
+            </div>
+          </li>
+          <li>
+            <div class="uk-panel">
+              <img src="images/doitac/facebook.png" alt="">
+            </div>
+          </li>
+          <li>
+            <div class="uk-panel">
+              <img src="images/doitac/hsbc.png" alt="">
+            </div>
+          </li>
+          <li>
+            <div class="uk-panel">
+              <img src="images/doitac/marter_card.png" alt="">
+            </div>
+          </li>
+          <li>
+            <div class="uk-panel">
+              <img src="images/doitac/netease.png" alt="">
+            </div>
+          </li>
+          <li>
+            <div class="uk-panel">
+              <img src="images/doitac/visa.png" alt="">
+            </div>
+          </li>
+          <li>
+            <div class="uk-panel">
+              <img src="images/doitac/waltdisney.png" alt="">
+            </div>
+          </li>
+        </ul>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" id="pre2" href="#"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" id="next2" href="#"></a>
+      </div>
+    </section>
+    <div class="sectionFooter text-center py-4">
+      <div class="mb-2 row no-gutters">
+        <div class="imgIcon mr-3"><img src="images/footer/facebook.svg" alt="Icon Facebook"></div>
+        <div class="imgIcon"><img src="images/footer/youtube.svg" alt="Icon Youtube"></div>
+      </div>
+      <p>Develop by Team 36</p>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    $('.carousel').carousel({
+      interval: 4000
+    })
+    var slider1=document.getElementById("uk1");
+    var slider2=document.getElementById("uk2");
+    slider1.setAttribute("uk-slider","autoplay: true; autoplay-interval: 2000");
+    slider2.setAttribute("uk-slider","autoplay: true; autoplay-interval: 2000");
+    var pre1=document.getElementById("pre1");
+    var pre2=document.getElementById("pre2");
+    pre1.setAttribute("uk-slider-item","previous");
+    pre2.setAttribute("uk-slider-item","previous");
+    var next1=document.getElementById("next1");
+    var next2=document.getElementById("next2");
+    next1.setAttribute("uk-slider-item","next");
+    next2.setAttribute("uk-slider-item","next");
+  </script>
+  <script src="js/slideshowProduct.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit-icons.min.js"></script>
+  <script src="js/slideInNgheNghiep.js"></script>
+  <script src="js/scrollSuKien.js"></script>
+  <script src="js/showNavbar.js"></script>
+</body>
+</html>

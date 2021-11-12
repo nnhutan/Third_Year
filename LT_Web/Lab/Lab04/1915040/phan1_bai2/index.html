@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="root">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Danh sách các cookie</h5>
+                </div>
+                <div class="card-body">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary js-open" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Thêm mới cookie</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true" data-bs-backdrop="static">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Thêm cookie</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        onclick="closeHandler()"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="">
+                                        <label for="key" class="form-label">Key</label>
+                                        <input type="text" class="form-control key">
+                                        <label for="value" class="form-label">Value</label>
+                                        <input type="text" class="form-control value">
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                        onclick="closeHandler()">Close</button>
+                                    <button type="button" class="btn btn-primary js-submit"
+                                        data-bs-dismiss="modal">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-responsive table hover">
+                        <div class="card-body">
+                            <table class="table table-responsive table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Key</th>
+                                        <th>Value</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="js-body">
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+        var flag = false;
+        var oldKey = '';
+        var oldValue = '';
+        const x = document.cookie
+        const modalTitle = document.querySelector('.modal-title')
+        const submitBtn = document.querySelector('.js-submit')
+        const bodytable = document.querySelector('.js-body')
+
+        function render(list) {
+            if (list.length !== 0 && list[0] !== '') {
+                list.forEach(item => {
+                    item = item.split('=')
+                    var key = item[0]
+                    var value = item[1]
+                    var row = document.createElement('tr')
+                    row.innerHTML = `
+                    <td>${key}</td>
+                    <td>${value}</td>
+                    <td><button class="btn btn-warning" onclick="editCookie('${key}', '${value}')">Edit</button></td>
+                    <td><button class="btn btn-danger" onclick="deleteCookie('${key}')">Delete</button></td>
+                    `
+                    bodytable.appendChild(row)
+                });
+            }
+        }
+
+        function closeHandler() {
+            const key = document.querySelector('.key')
+            const value = document.querySelector('.value')
+            setCookie(key.value, value.value, 30)
+            key.value = value.value = ''
+            flag = false;
+            modalTitle.innerHTML = "Thêm cookie"
+        }
+        function editCookie(key, value) {
+            oldKey = key
+            oldValue = value
+            const keyInput = document.querySelector('.key')
+            const valueInput = document.querySelector('.value')
+            keyInput.value = key
+            valueInput.value = value
+            flag = true;
+            modalTitle.innerHTML = 'Sửa cookie'
+            document.querySelector('.js-open').click();
+        }
+
+        function deleteCookie(key) {
+            document.cookie = key + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+            location.reload();
+        }
+
+        function getCookie(key = '') {
+            var allCookies = document.cookie.split(';');
+            if (key !== '') {
+                var key = key + "=";
+                for (var i = 0; i < allCookies.length; i++) {
+                    var target = allCookies[i];
+                    while (target.charAt(0) == ' ') target = target.substring(1);
+                    if (target.indexOf(key) == 0) return target.substring(key.length, target.length);
+                }
+                return "";
+            }
+            else return allCookies;
+        }
+
+        render(getCookie())
+        function setCookie(key, value, expDays = 1) {
+            let date = new Date();
+            date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = key + "=" + value + "; " + expires + "; path=/";
+        }
+
+        submitBtn.addEventListener('click', () => {
+            const key = document.querySelector('.key')
+            const value = document.querySelector('.value')
+            if (flag && key.value !== oldKey) { deleteCookie(oldKey) }
+            setCookie(key.value, value.value, 30)
+            key.value = value.value = ''
+            location.reload()
+        })
+    </script>
+</body>
+
+</html>

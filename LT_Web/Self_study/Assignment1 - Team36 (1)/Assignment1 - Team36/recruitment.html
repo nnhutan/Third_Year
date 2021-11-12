@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Charm&family=Texturina:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="nav_header">
+    <div class="container h-100">
+      <div class="logo h-100 d-flex align-items-center justify-content-between">
+        <a href="./HomePage.html">
+          <img src="./images/vng-logo.png" alt="logovng" />
+        </a>
+        <nav class="nav_mobile navbar navbar-expand-lg">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fal fa-bars"></i>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./HomePage.html">trang chủ</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  chúng tôi
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="./history.html">lịch sử</a>
+                  <a class="dropdown-item" href="./ourculture.html">văn hoá doanh nghiệp</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./product.html">sản phẩm</a>
+              </li>
+              <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  liên hệ
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="./contact.html">văn phòng</a>
+                  <a class="dropdown-item" href="./recruitment.html">tuyển dụng</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="container recruitment bg-while">
+      <div class="row">
+        <div class="col-md-3">
+          <h2>Các ngành nghề</h2>
+          <ul>
+            <li class="career active"><a href="#">Kỹ thuật / Lập trình</a></li>
+            <li class="career"><a href="#">Kinh doanh / Tiếp thị</a></li>
+            <li class="career"><a href="#">Thiết kế / Sáng tạo</a></li>
+            <li class="career"><a href="#">Hỗ trợ kinh doanh</a></li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <h2>Vị trí đang tuyển</h2>
+          <div class="position">
+            <p class="date text-primary">Hạn chót: 27/12/2020</p>
+            <p class="title" title="Bấm để xem thêm thông tin"><a href="#" onclick="displayDescribe(1)">Software Engineer (Java)</a></p>
+            <p class="address">TP. Hồ Chí Minh</p>
+            <div class="describe d-none">
+              <h3>Mô tả công việc</h3>
+              <ul>
+                <li>Tham gia vận hành và phát triển hệ thống ZingID và Game Payment</li>
+                <li>Nghiên cứu và ứng dụng vào hệ thống nhằm đảm bảo độ tin cậy và khả năng mở rộng</li>
+                <li>Phát triển các công vụ đáp ứng các công việc vận hành</li>
+              </ul>
+              <h3>Yêu cầu</h3>
+              <ul>
+                <li>Có kinh nghiệm Java Core từ 2 năm trở lên (open level tới Senior)</li>
+                <li>Có kinh nghiệm CSDL RDBMS, NoSQL</li>
+                <li>Có kinh nghiệm sử dụng caching</li>
+                <li>Nắm vững cấu trúc dữ liệu và thuật toán cơ bản</li>
+                <li>Hiểu về kiến trúc Microservices, HTTP protocol, REST/SOAP webservice</li>
+                <li>Có kiến thức cơ bản với Linux</li>
+                <li>Có kinh nghiệm sử dụng Messaging System: kaffa, ZeroMQ, Rabbit MQ là 1 lợi thế</li>
+                <li>Tư duy tích cực, có kỹ năng giải quyết vấn đề, phối hợp tốt với các thành viên khác, nhiệt tình tham gia các hoạt động xây dựng team</li>
+              </ul>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm">Ứng tuyển</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+
+          <div class="position">
+            <p class="date text-primary">Hạn chót: 27/12/2020</p>
+            <p class="title" title="Bấm để xem thêm thông tin"><a href="#" onclick="displayDescribe(2)">QC Engineer</a></p>
+            <p class="address">TP. Hồ Chí Minh</p>
+            <div class="describe d-none">
+              <h3>Mô tả công việc</h3>
+              <ul>
+                <li>Tham gia vận hành và phát triển hệ thống ZingID và Game Payment</li>
+                <li>Nghiên cứu và ứng dụng vào hệ thống nhằm đảm bảo độ tin cậy và khả năng mở rộng</li>
+                <li>Phát triển các công vụ đáp ứng các công việc vận hành</li>
+              </ul>
+              <h3>Yêu cầu</h3>
+              <ul>
+                <li>Có kinh nghiệm Java Core từ 2 năm trở lên (open level tới Senior)</li>
+                <li>Có kinh nghiệm CSDL RDBMS, NoSQL</li>
+                <li>Có kinh nghiệm sử dụng caching</li>
+                <li>Nắm vững cấu trúc dữ liệu và thuật toán cơ bản</li>
+                <li>Hiểu về kiến trúc Microservices, HTTP protocol, REST/SOAP webservice</li>
+                <li>Có kiến thức cơ bản với Linux</li>
+                <li>Có kinh nghiệm sử dụng Messaging System: kaffa, ZeroMQ, Rabbit MQ là 1 lợi thế</li>
+                <li>Tư duy tích cực, có kỹ năng giải quyết vấn đề, phối hợp tốt với các thành viên khác, nhiệt tình tham gia các hoạt động xây dựng team</li>
+              </ul>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm">Ứng tuyển</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+
+          <div class="position">
+            <p class="date text-primary">Hạn chót: 27/12/2020</p>
+            <p class="title" title="Bấm để xem thêm thông tin"><a href="#" onclick="displayDescribe(3)">Senior Software Engineer (Java/Golang)</a></p>
+            <p class="address">Đà Nẵng</p>
+            <div class="describe d-none">
+              <h3>Mô tả công việc</h3>
+              <ul>
+                <li>Tham gia vận hành và phát triển hệ thống ZingID và Game Payment</li>
+                <li>Nghiên cứu và ứng dụng vào hệ thống nhằm đảm bảo độ tin cậy và khả năng mở rộng</li>
+                <li>Phát triển các công vụ đáp ứng các công việc vận hành</li>
+              </ul>
+              <h3>Yêu cầu</h3>
+              <ul>
+                <li>Có kinh nghiệm Java Core từ 2 năm trở lên (open level tới Senior)</li>
+                <li>Có kinh nghiệm CSDL RDBMS, NoSQL</li>
+                <li>Có kinh nghiệm sử dụng caching</li>
+                <li>Nắm vững cấu trúc dữ liệu và thuật toán cơ bản</li>
+                <li>Hiểu về kiến trúc Microservices, HTTP protocol, REST/SOAP webservice</li>
+                <li>Có kiến thức cơ bản với Linux</li>
+                <li>Có kinh nghiệm sử dụng Messaging System: kaffa, ZeroMQ, Rabbit MQ là 1 lợi thế</li>
+                <li>Tư duy tích cực, có kỹ năng giải quyết vấn đề, phối hợp tốt với các thành viên khác, nhiệt tình tham gia các hoạt động xây dựng team</li>
+              </ul>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm">Ứng tuyển</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+
+          <div class="position">
+            <p class="date text-primary">Hạn chót: 27/12/2020</p>
+            <p class="title" title="Bấm để xem thêm thông tin"><a href="#" onclick="displayDescribe(4)">Senior Data Engineer</a></p>
+            <p class="address">Hà Nội</p>
+            <div class="describe d-none">
+              <h3>Mô tả công việc</h3>
+              <ul>
+                <li>Tham gia vận hành và phát triển hệ thống ZingID và Game Payment</li>
+                <li>Nghiên cứu và ứng dụng vào hệ thống nhằm đảm bảo độ tin cậy và khả năng mở rộng</li>
+                <li>Phát triển các công vụ đáp ứng các công việc vận hành</li>
+              </ul>
+              <h3>Yêu cầu</h3>
+              <ul>
+                <li>Có kinh nghiệm Java Core từ 2 năm trở lên (open level tới Senior)</li>
+                <li>Có kinh nghiệm CSDL RDBMS, NoSQL</li>
+                <li>Có kinh nghiệm sử dụng caching</li>
+                <li>Nắm vững cấu trúc dữ liệu và thuật toán cơ bản</li>
+                <li>Hiểu về kiến trúc Microservices, HTTP protocol, REST/SOAP webservice</li>
+                <li>Có kiến thức cơ bản với Linux</li>
+                <li>Có kinh nghiệm sử dụng Messaging System: kaffa, ZeroMQ, Rabbit MQ là 1 lợi thế</li>
+                <li>Tư duy tích cực, có kỹ năng giải quyết vấn đề, phối hợp tốt với các thành viên khác, nhiệt tình tham gia các hoạt động xây dựng team</li>
+              </ul>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm">Ứng tuyển</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+
+          <div class="position">
+            <p class="date text-primary">Hạn chót: 27/12/2020</p>
+            <p class="title" title="Bấm để xem thêm thông tin"><a href="#" onclick="displayDescribe(5)">Senior QC Engineer (IoT)</a></p>
+            <p class="address">Hà Nội</p>
+            <div class="describe d-none">
+              <h3>Mô tả công việc</h3>
+              <ul>
+                <li>Tham gia vận hành và phát triển hệ thống ZingID và Game Payment</li>
+                <li>Nghiên cứu và ứng dụng vào hệ thống nhằm đảm bảo độ tin cậy và khả năng mở rộng</li>
+                <li>Phát triển các công vụ đáp ứng các công việc vận hành</li>
+              </ul>
+              <h3>Yêu cầu</h3>
+              <ul>
+                <li>Có kinh nghiệm Java Core từ 2 năm trở lên (open level tới Senior)</li>
+                <li>Có kinh nghiệm CSDL RDBMS, NoSQL</li>
+                <li>Có kinh nghiệm sử dụng caching</li>
+                <li>Nắm vững cấu trúc dữ liệu và thuật toán cơ bản</li>
+                <li>Hiểu về kiến trúc Microservices, HTTP protocol, REST/SOAP webservice</li>
+                <li>Có kiến thức cơ bản với Linux</li>
+                <li>Có kinh nghiệm sử dụng Messaging System: kaffa, ZeroMQ, Rabbit MQ là 1 lợi thế</li>
+                <li>Tư duy tích cực, có kỹ năng giải quyết vấn đề, phối hợp tốt với các thành viên khác, nhiệt tình tham gia các hoạt động xây dựng team</li>
+              </ul>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm">Ứng tuyển</button>
+              </div>
+            </div>
+            <hr>
+          </div>
+
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="javascript:void(0);"><i class="fas fa-backward"></i></a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+            <li class="page-item active"><a class="page-link" href="javascript:void(0);">2</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">5</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">6</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">...</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);"><i class="fas fa-forward"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <section class="searchPosition">
+            <h2>Tìm kiếm cơ hội nghề nghiệp</h2>
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" id="keyWord" onfocus="this.placeholder=''" onblur="this.placeholder='Từ khóa'" placeholder="Từ khóa">
+              </div>
+              <div class="form-group">
+                <select class="form-control" id="selectPosition">
+                  <option selected disabled>Ngành nghề</option>
+                  <option>Kỹ thuật / Lập trình</option>
+                  <option>Kinh doanh / Tiếp thị</option>
+                  <option>Thiết kế / Sáng tạo</option>
+                  <option>Hỗ trợ kinh doanh</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select class="form-control" id="selectPosition">
+                  <option selected disabled>Nơi làm việc</option>
+                  <option>TP. Hồ Chí Minh</option>
+                  <option>Đà Nẵng</option>
+                  <option>Hà Nội</option>
+                </select>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm">Tìm kiếm</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="registerNotification">
+            <h2>Đăng kí nhận tin qua email</h2>
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" id="fullName" onfocus="this.placeholder=''" onblur="this.placeholder='Họ và tên'" placeholder="Họ và tên">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'" placeholder="Email">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm">Đăng kí</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="advice">
+            <h2>Lời khuyên dành cho ứng viên</h2>
+            <p>Để gây ấn tượng tốt với nhà tuyển dụng, bạn cần chuẩn bị tốt hồ sơ của mình. Đừng gửi cho chúng tôi một bản sơ yếu lý lịch chung chung. Một hồ sơ tốt không chỉ được trình bày rõ ràng, mà còn phải được tổ chức tốt với những mục tiêu cụ thể, thể hiện đầy đủ kinh nghiệm bản thân, bằng cấp, kỹ năng… đặc biệt nên có những điểm nhấn cho các thông tin bạn muốn truyền tải tới nhà tuyển dụng. </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer" style="background: url(images/footer-bg.jpg) 0 0/cover no-repeat">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>CÔNG TY CỔ PHẦN VNG</h2>
+        </div>
+        <div class="col-md-6 box-social">
+          <ul>
+            <li><a href="#"><img src="images/facebook.png" ></a></li>
+            <li><a href="#"><img src="images/twitter.png" ></a></li>
+            <li><a href="#"><img src="images/g-plus.png" ></a></li>
+            <li><a href="#"><img src="images/youtube.png" ></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-md-4">
+          <p><i class="fas fa-map-marker-alt"></i> 172 Hà Chương, P. Trung Mỹ Tây, Q.12, Tp.HCM</p>
+          <p><i class="fas fa-phone"></i> 0899 311 211 - 0948 140 239</p>
+        </div>
+        <div class="col-md-4">
+          <p><i class="fas fa-file-alt"></i> Mã số thuế: 0314521395</p>
+          <p><i class="fas fa-envelope"></i> info@webchuyennghiep.vn</p>
+        </div>
+        <div class="col-md-4 phone-number" style="background: url(images/support-bg.png) left center no-repeat;">
+          <p>Hỗ trợ tư vấn: 0899 311 211</p>
+          <div>
+            <ul class="time d-flex">
+              <li>T2-T6 (8:00 – 17:00)</li>
+              <li style="padding-left: 20px;">T7 (8:00 - 12:00)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="js/fun.js"></script>
+</body>
+</html>
