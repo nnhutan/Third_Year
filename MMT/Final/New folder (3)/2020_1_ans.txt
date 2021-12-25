@@ -1,0 +1,63 @@
+Final 2020_1
+1A
+2A
+3B
+4A
+5B
+6D
+7B
+8A
+9B
+10B
+11B
+12B
+13A
+14A
+15A
+16B
+17A
+18C
+19A?
+20A
+21A
+22C
+23C
+24D
+25A
+26D
+27B
+28A
+29 đéo học A
+30B
+31A
+32B
+33B
+34D
+35C
+36B
+37B
+38D
+39B
+40B // max hop of RIP: 15
+41C
+42B!
+43B
+44C -> A
+45B
+46B
+47B
+48C
+49B
+50C
+51C
+52D // 802.11 frame: 4 fields of address
+53B -> A
+54B
+55B
+56B
+57?
+58B
+59?
+60C // no ARP for IPv6
+
+
